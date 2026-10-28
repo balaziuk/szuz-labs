@@ -1,0 +1,17 @@
+id,name,kind,budgetLimit
+Cat_Income,Доходи,IncomeGroup,
+Cat_Expenses,Витрати,ExpenseGroup,
+Cat_Housing,Житло,ExpenseGroup,
+Cat_Daily,Повсякденні витрати,ExpenseGroup,
+Cat_Services,Послуги та розвиток,ExpenseGroup,
+Cat_Salary,Заробітна плата,IncomeCategory,
+Cat_Freelance,Фриланс,IncomeCategory,
+Cat_Interest,Відсотки за депозитом,IncomeCategory,
+Cat_Rent,Оренда,ExpenseCategory,15000.0
+Cat_Utilities,Комунальні послуги,ExpenseCategory,4000.0
+Cat_Food,Харчування,ExpenseCategory,
+Cat_Transport,Транспорт,ExpenseCategory,
+Cat_Telecom,Зв'язок та інтернет,ExpenseCategory,
+Cat_Health,Здоров'я,ExpenseCategory,
+Cat_Education,Освіта,ExpenseCategory,
+Cat_SavingsTransfer,Переказ на накопичення,TransferCategory,

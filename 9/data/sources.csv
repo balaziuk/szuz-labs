@@ -1,0 +1,5 @@
+id,name,kind,generatedAt
+Src_BankExport2026,Експорт банківських операцій 2026,bank_export,2026-10-15
+Src_ManualEntry,Ручне введення готівкових витрат,manual,2026-10-15
+Src_BudgetPlan2026,Річний фінансовий план 2026,plan,2026-03-25
+Src_RiskAnalysis,Аналіз фінансових ризиків (фінменеджер),analysis,2026-10-10

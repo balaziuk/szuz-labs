@@ -1,0 +1,13 @@
+id,name,type,edrpou
+Cp_Employer,ТОВ «Роботодавець»,Client,87654321
+Cp_FreelanceClient,ФОП Іваненко,Client,99887766
+Cp_DigitalStudio,ТОВ «Діджитал Студіо»,Client,41122334
+Cp_PrivatBank,АТ КБ «ПриватБанк»,Bank,14360570
+Cp_Orendodavets,ТОВ «Орендодавець»,Supplier,12345678
+Cp_Utility,АТ «Київські комунальні»,Supplier,33445566
+Cp_Kyivstar,ПрАТ «Київстар»,Supplier,21673832
+Cp_Silpo,ТОВ «Сільпо-Фуд»,Supplier,40720198
+Cp_ATB,ТОВ «АТБ-Маркет»,Supplier,30487219
+Cp_Uklon,ТОВ «Уклон»,Supplier,39932340
+Cp_Apteka,ТОВ «Аптека АНЦ»,Supplier,36151140
+Cp_Prometheus,ГО «Прометеус»,Supplier,39185340

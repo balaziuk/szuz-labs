@@ -1,0 +1,38 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# ЛР9: матеріали для звіту
+9/docs/*
+!9/docs/graph_schema.png
+9/llm_log/
+9/claims/
+9/screenshots/
+9/tests/t2c_v*.json
+9/src/gen_cypher_doc.py
+9/src/gen_schema.py
+
+# ЛР8
+8/tools/
+8/screenshots/
+8/kms_lab8.pdf
+8/before_after.md
+8/fuseki_results.md
+8/inference_demo.md
+8/query_results.md
+8/shacl_report.md
+
+# ЛР10
+10/docs/
+10/llm_log/
+10/claims/
+10/src/plot_metrics.py
+
+# СР
+ср-6/screenshots/
+ср-6/results.md
+ср-6/СКРІНШОТИ.md
+ср-7/validation.md
+ср-8/results.md
+ср-9/llm_log.jsonl

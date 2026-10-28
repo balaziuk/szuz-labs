@@ -1,0 +1,13 @@
+CREATE CONSTRAINT operation_id IF NOT EXISTS FOR (n:Operation) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT account_id IF NOT EXISTS FOR (n:Account) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT account_number IF NOT EXISTS FOR (n:Account) REQUIRE n.accountNumber IS UNIQUE;
+CREATE CONSTRAINT counterparty_id IF NOT EXISTS FOR (n:Counterparty) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT category_id IF NOT EXISTS FOR (n:Category) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT budget_id IF NOT EXISTS FOR (n:Budget) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT report_id IF NOT EXISTS FOR (n:Report) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT risk_id IF NOT EXISTS FOR (n:Risk) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT source_id IF NOT EXISTS FOR (n:Source) REQUIRE n.id IS UNIQUE;
+
+CREATE INDEX counterparty_name IF NOT EXISTS FOR (n:Counterparty) ON (n.name);
+CREATE INDEX risk_level IF NOT EXISTS FOR (n:Risk) ON (n.level);
+CREATE INDEX budget_month IF NOT EXISTS FOR (n:Budget) ON (n.month);

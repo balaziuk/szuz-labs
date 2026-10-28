@@ -1,0 +1,7 @@
+id,type,level,description
+Risk_RentConcentration,ExpenseConcentrationRisk,високий,частка оренди понад 70% усіх витрат
+Risk_LiquidityOct,LiquidityRisk,середній,значні витрати на оренду при коливанні доходів
+Risk_CurrencyFreelance,CurrencyRisk,середній,фриланс-доходи в USD залежать від курсу гривні
+Risk_IncomeDependency,IncomeConcentrationRisk,високий,основний дохід залежить від одного роботодавця
+Risk_RentIncrease,PriceRisk,середній,можливе підвищення орендної плати орендодавцем
+Risk_UtilitiesSeasonal,SeasonalRisk,низький,сезонне зростання комунальних платежів
