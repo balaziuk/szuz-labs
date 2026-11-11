@@ -36,7 +36,7 @@ python -m venv .venv
 ```
 
 Розмітка для κ запускається окремо: `src/make_annotation.py` створює порожній
-`annotation/annotation_B.csv`, другий розмітник заповнює його за `annotation/ІНСТРУКЦІЯ.md`, а
+`annotation/annotation_B.csv`, другий розмітник заповнює стовпець `relevant` (1/0), а
 `src/kappa.py` рахує результат. Повторний запуск `make_annotation.py` перезаписує готову розмітку.
 
 `build_corpus.py` читає звіти з `../../labs` і аналітику з `../9/docs`. Цих файлів у репозиторії
