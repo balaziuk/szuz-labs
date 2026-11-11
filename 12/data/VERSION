@@ -1,0 +1,4 @@
+lab12-facts-v1
+seed=42
+generator=etl/generate.py
+rows=1358

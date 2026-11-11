@@ -1,0 +1,58 @@
+version: 1
+reviewed_on: 2026-11-01
+owner: аналітик фінансових операцій
+metrics:
+  - name: total_expense
+    definition: Сума всіх операцій типу Expense за вибраний період.
+    formula: SUM(amount) WHERE kind = 'Expense'
+    unit: UAH
+    owner: аналітик фінансових операцій
+    sources: [fact_operation, dim_date]
+    limitations: Перекази і доходи не входять. Сума адитивна за часом і категоріями.
+    status: verified
+    reviewed_on: 2026-11-01
+  - name: total_income
+    definition: Сума всіх операцій типу Income за вибраний період.
+    formula: SUM(amount) WHERE kind = 'Income'
+    unit: UAH
+    owner: аналітик фінансових операцій
+    sources: [fact_operation, dim_date]
+    limitations: Адитивна. Не включає переказ між власними рахунками.
+    status: verified
+    reviewed_on: 2026-11-01
+  - name: net_cashflow
+    definition: Доходи мінус витрати. Переказ між рахунками на потік не впливає.
+    formula: SUM(CASE kind WHEN Income THEN amount WHEN Expense THEN -amount ELSE 0 END)
+    unit: UAH
+    owner: аналітик фінансових операцій
+    sources: [fact_operation, dim_date]
+    limitations: Адитивна лише якщо перекази виключені з суми, як у цій формулі.
+    status: verified
+    reviewed_on: 2026-11-01
+  - name: expense_share
+    definition: Частка витрат однієї категорії в усіх витратах періоду.
+    formula: SUM(amount) FILTER category / SUM(amount) FILTER kind = Expense
+    unit: частка
+    owner: аналітик фінансових операцій
+    sources: [fact_operation, dim_category, dim_date]
+    limitations: Неадитивна. Потребує фільтр category_id. Частки категорій сумуються до 1 лише всередині одного періоду.
+    status: verified
+    reviewed_on: 2026-11-01
+  - name: avg_expense
+    definition: Середня сума однієї витратної операції.
+    formula: AVG(amount) WHERE kind = 'Expense'
+    unit: UAH
+    owner: аналітик фінансових операцій
+    sources: [fact_operation, dim_date]
+    limitations: Неадитивна. Середнє за рік не дорівнює середньому середніх по місяцях.
+    status: verified
+    reviewed_on: 2026-11-01
+  - name: budget_usage
+    definition: Відношення фактичних витрат категорії за місяць до місячного ліміту.
+    formula: SUM(amount) / budget_limit_uah
+    unit: частка
+    owner: аналітик фінансових операцій
+    sources: [fact_operation, dim_category]
+    limitations: Напівадитивна за часом. Ліміт заданий на місяць, тому період має бути один місяць. Категорії без ліміту не рахуються.
+    status: verified
+    reviewed_on: 2026-11-01

@@ -1,0 +1,25 @@
+{"sql": "DELETE FROM fact_operation", "expect": "block", "why": "видалення"}
+{"sql": "UPDATE fact_operation SET amount = 0", "expect": "block", "why": "оновлення"}
+{"sql": "INSERT INTO fact_operation SELECT * FROM fact_operation", "expect": "block", "why": "вставка"}
+{"sql": "DROP TABLE fact_operation", "expect": "block", "why": "видалення таблиці"}
+{"sql": "SELECT 1 FROM v_operation; DROP TABLE fact_operation", "expect": "block", "why": "другий оператор"}
+{"sql": "COPY fact_operation TO 'x.csv'", "expect": "block", "why": "вивантаження у файл"}
+{"sql": "ATTACH 'x.db'", "expect": "block", "why": "підключення бази"}
+{"sql": "SELECT amount INTO t FROM v_operation", "expect": "block", "why": "SELECT INTO"}
+{"sql": "SELECT * FROM fact_operation", "expect": "block", "why": "таблиця поза поданням"}
+{"sql": "SELECT amount FROM other.v_operation", "expect": "block", "why": "чужа схема"}
+{"sql": "SELECT * FROM 'x.csv'", "expect": "block", "why": "читання файлу"}
+{"sql": "SELECT amount FROM v_operation, read_csv('x.csv')", "expect": "block", "why": "таблична функція"}
+{"sql": "SELECT getenv('GROQ_API_KEY') FROM v_operation", "expect": "block", "why": "читання змінних середовища"}
+{"sql": "SELECT current_setting('threads') FROM v_operation", "expect": "block", "why": "читання налаштувань"}
+{"sql": "SELECT query('select 1') FROM v_operation", "expect": "block", "why": "вкладений текст запиту"}
+{"sql": "WITH v_operation AS (SELECT 1 AS amount) SELECT amount FROM v_operation", "expect": "block", "why": "CTE підміняє подання"}
+{"sql": "WITH x AS (SELECT * FROM fact_operation) SELECT * FROM x, v_operation", "expect": "block", "why": "CTE читає таблицю"}
+{"sql": "SELECT nope FROM v_operation", "expect": "block", "why": "невідомий стовпець"}
+{"sql": "SELECT getenv('X')", "expect": "block", "why": "без v_operation"}
+{"sql": "SELECT round(sum(amount), 2) AS s FROM v_operation WHERE kind = 'Expense'", "expect": "pass", "limit": 200, "why": "агрегат"}
+{"sql": "WITH x AS (SELECT category_name, sum(amount) AS s FROM v_operation GROUP BY 1) SELECT category_name, s FROM x ORDER BY s DESC LIMIT 3", "expect": "pass", "limit": 3, "why": "дозволений CTE"}
+{"sql": "SELECT month_key, sum(amount) AS s, rank() OVER (ORDER BY sum(amount) DESC) AS r FROM v_operation GROUP BY 1", "expect": "pass", "limit": 200, "why": "віконна функція"}
+{"sql": "SELECT * FROM v_operation LIMIT 100000000", "expect": "pass", "limit": 200, "why": "завеликий LIMIT зменшено"}
+{"sql": "SELECT * FROM v_operation WHERE operation_id IN (SELECT operation_id FROM v_operation LIMIT 1)", "expect": "pass", "limit": 200, "why": "LIMIT лише в підзапиті"}
+{"sql": "SELECT amount FROM v_operation UNION ALL SELECT amount FROM v_operation", "expect": "pass", "limit": 200, "why": "UNION без LIMIT"}

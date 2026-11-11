@@ -23,11 +23,29 @@ __pycache__/
 8/query_results.md
 8/shacl_report.md
 
-# ЛР10
+# ЛР10: матеріали для звіту
 10/docs/
 10/llm_log/
 10/claims/
 10/src/plot_metrics.py
+
+# ЛР11: матеріали для звіту
+11/docs/
+11/llm_log/
+11/claims/
+11/eval/review_draft.csv
+11/eval/review_notes.md
+11/eval/human_review_before_draft.jsonl
+11/src/apply_review.py
+11/src/plot_figures.py
+
+# ЛР12: матеріали для звіту
+12/docs/*
+!12/docs/star.png
+12/llm_log/
+12/claims/
+12/dashboard/*.png
+12/dashboard/interpretations.md
 
 # СР
 ср-6/screenshots/
