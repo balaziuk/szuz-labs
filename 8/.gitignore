@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+_lab8_extract.txt
+_run_queries_out.txt
+tools/fuseki.zip
+tools/apache-jena-fuseki-5.2.0/run/

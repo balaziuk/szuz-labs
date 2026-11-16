@@ -1,0 +1,178 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fin: <http://example.org/financial-operations#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fin:Acc_Savings_UA987654321 a fin:SavingsAccount ;
+    fin:accountNumber "UA987654321"^^xsd:string ;
+    fin:balance 5000.0 ;
+    fin:currency "UAH"^^xsd:string .
+
+fin:Report_CF_Oct2026 a fin:CashFlowReport ;
+    fin:aggregates fin:Op_00128,
+        fin:Op_00129,
+        fin:Op_00130,
+        fin:Op_00131 ;
+    fin:period "жовтень 2026"^^xsd:string ;
+    fin:totalExpenses 22300.0 ;
+    fin:totalIncome 12000.0 .
+
+fin:Report_CF_Sep2026 a fin:CashFlowReport ;
+    fin:aggregates fin:Op_00124,
+        fin:Op_00125,
+        fin:Op_00126,
+        fin:Op_00127 ;
+    fin:period "вересень 2026"^^xsd:string ;
+    fin:totalExpenses 21000.0 ;
+    fin:totalIncome 30000.0 .
+
+fin:Risk_LiquidityOct a fin:LiquidityRisk ;
+    fin:affectsBudget fin:Budget_Oct2026 ;
+    fin:riskDescription "значні витрати на оренду при коливанні доходів"^^xsd:string ;
+    fin:riskLevel "середній"^^xsd:string .
+
+fin:Risk_RentConcentration a fin:ExpenseConcentrationRisk ;
+    fin:affectsBudget fin:Budget_Sep2026 ;
+    fin:relatedToCategory fin:Cat_Rent ;
+    fin:riskDescription "частка оренди понад 70% усіх витрат"^^xsd:string ;
+    fin:riskLevel "високий"^^xsd:string .
+
+fin:Budget_Oct2026 a fin:Budget ;
+    fin:actualAmount 22300.0 ;
+    fin:deviation -2700.0 ;
+    fin:includesCategory fin:Cat_Food,
+        fin:Cat_Rent,
+        fin:Cat_Utilities ;
+    fin:period "жовтень 2026"^^xsd:string ;
+    fin:plannedAmount 25000.0 .
+
+fin:Budget_Sep2026 a fin:Budget ;
+    fin:actualAmount 21000.0 ;
+    fin:deviation 1000.0 ;
+    fin:includesCategory fin:Cat_Food,
+        fin:Cat_Rent,
+        fin:Cat_Transport ;
+    fin:period "вересень 2026"^^xsd:string ;
+    fin:plannedAmount 20000.0 .
+
+fin:Cat_Freelance a fin:IncomeCategory ;
+    fin:categoryName "Фриланс"^^xsd:string ;
+    skos:prefLabel "Фриланс"@uk .
+
+fin:Cat_Salary a fin:IncomeCategory ;
+    fin:categoryName "Заробітна плата"^^xsd:string ;
+    skos:prefLabel "Заробітна плата"@uk .
+
+fin:Cp_Employer a fin:Client ;
+    fin:counterpartyName "ТОВ «Роботодавець»"^^xsd:string ;
+    fin:edrpouCode "87654321"^^xsd:string ;
+    foaf:name "ТОВ «Роботодавець»"@uk .
+
+fin:Cp_FreelanceClient a fin:Client ;
+    fin:counterpartyName "ФОП Іваненко"^^xsd:string ;
+    fin:edrpouCode "99887766"^^xsd:string ;
+    foaf:name "ФОП Іваненко"@uk .
+
+fin:Cp_Utility a fin:Supplier ;
+    fin:counterpartyName "АТ «Київські комунальні»"^^xsd:string ;
+    fin:edrpouCode "33445566"^^xsd:string ;
+    foaf:name "АТ «Київські комунальні»"@uk .
+
+fin:Op_00124 a fin:Income ;
+    fin:amount 30000.0 ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Salary ;
+    fin:hasCounterparty fin:Cp_Employer ;
+    fin:operationDate "2026-09-01T00:00:00"^^xsd:dateTime ;
+    fin:operationId "00124"^^xsd:string ;
+    dcterms:date "2026-09-01T00:00:00"^^xsd:dateTime .
+
+fin:Op_00125 a fin:Expense ;
+    fin:amount 15000.0 ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Rent ;
+    fin:hasCounterparty fin:Cp_Orendodavets ;
+    fin:operationDate "2026-09-02T00:00:00"^^xsd:dateTime ;
+    fin:operationId "00125"^^xsd:string ;
+    dcterms:date "2026-09-02T00:00:00"^^xsd:dateTime .
+
+fin:Op_00126 a fin:Expense ;
+    fin:amount 2000.0 ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Transport ;
+    fin:operationDate "2026-09-03T00:00:00"^^xsd:dateTime ;
+    fin:operationId "00126"^^xsd:string ;
+    dcterms:date "2026-09-03T00:00:00"^^xsd:dateTime .
+
+fin:Op_00127 a fin:Expense ;
+    fin:amount 4000.0 ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Food ;
+    fin:operationDate "2026-09-05T00:00:00"^^xsd:dateTime ;
+    fin:operationId "00127"^^xsd:string ;
+    dcterms:date "2026-09-05T00:00:00"^^xsd:dateTime .
+
+fin:Op_00128 a fin:Expense ;
+    fin:amount 3500.0 ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Utilities ;
+    fin:hasCounterparty fin:Cp_Utility ;
+    fin:operationDate "2026-10-03T00:00:00"^^xsd:dateTime ;
+    fin:operationId "00128"^^xsd:string ;
+    dcterms:date "2026-10-03T00:00:00"^^xsd:dateTime .
+
+fin:Op_00129 a fin:Income ;
+    fin:amount 12000.0 ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Freelance ;
+    fin:hasCounterparty fin:Cp_FreelanceClient ;
+    fin:operationDate "2026-10-05T00:00:00"^^xsd:dateTime ;
+    fin:operationId "00129"^^xsd:string ;
+    dcterms:date "2026-10-05T00:00:00"^^xsd:dateTime .
+
+fin:Op_00130 a fin:Expense ;
+    fin:amount 15000.0 ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Rent ;
+    fin:hasCounterparty fin:Cp_Orendodavets ;
+    fin:operationDate "2026-10-02T00:00:00"^^xsd:dateTime ;
+    fin:operationId "00130"^^xsd:string ;
+    dcterms:date "2026-10-02T00:00:00"^^xsd:dateTime .
+
+fin:Op_00131 a fin:Expense ;
+    fin:amount 3800.0 ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Food ;
+    fin:operationDate "2026-10-08T00:00:00"^^xsd:dateTime ;
+    fin:operationId "00131"^^xsd:string ;
+    dcterms:date "2026-10-08T00:00:00"^^xsd:dateTime .
+
+fin:Cat_Transport a fin:ExpenseCategory ;
+    fin:categoryName "Транспорт"^^xsd:string ;
+    skos:prefLabel "Транспорт"@uk .
+
+fin:Cat_Utilities a fin:ExpenseCategory ;
+    fin:budgetLimit 4000.0 ;
+    fin:categoryName "Комунальні послуги"^^xsd:string ;
+    skos:prefLabel "Комунальні послуги"@uk .
+
+fin:Cp_Orendodavets a fin:Supplier ;
+    fin:counterpartyName "ТОВ «Орендодавець»"^^xsd:string ;
+    fin:edrpouCode "12345678"^^xsd:string ;
+    foaf:name "ТОВ «Орендодавець»"@uk .
+
+fin:Cat_Food a fin:ExpenseCategory ;
+    fin:categoryName "Харчування"^^xsd:string ;
+    skos:prefLabel "Харчування"@uk .
+
+fin:Cat_Rent a fin:ExpenseCategory ;
+    fin:budgetLimit 15000.0 ;
+    fin:categoryName "Оренда"^^xsd:string ;
+    skos:prefLabel "Оренда"@uk .
+
+fin:Acc_UA123456789 a fin:CurrentAccount ;
+    fin:accountNumber "UA123456789"^^xsd:string ;
+    fin:balance 9000.0 ;
+    fin:currency "UAH"^^xsd:string .
+

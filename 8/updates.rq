@@ -1,0 +1,32 @@
+PREFIX fin:     <http://example.org/financial-operations#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+
+# BEGIN U1
+INSERT DATA {
+  fin:Op_00134 a fin:Expense ;
+    fin:operationId "00134"^^xsd:string ;
+    fin:operationDate "2026-10-12T00:00:00"^^xsd:dateTime ;
+    dcterms:date "2026-10-12T00:00:00"^^xsd:dateTime ;
+    fin:amount "750.0"^^xsd:decimal ;
+    fin:belongsToAccount fin:Acc_UA123456789 ;
+    fin:belongsToCategory fin:Cat_Utilities ;
+    fin:hasCounterparty fin:Cp_Utility .
+}
+# END U1
+
+# BEGIN U2
+DELETE {
+  fin:Acc_UA123456789 fin:balance ?old .
+}
+INSERT {
+  fin:Acc_UA123456789 fin:balance ?new .
+}
+WHERE {
+  fin:Acc_UA123456789 fin:balance ?old .
+  fin:Op_00134 fin:amount ?amt .
+  BIND (?old - ?amt AS ?new)
+}
+# END U2

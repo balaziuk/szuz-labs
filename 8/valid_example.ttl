@@ -1,0 +1,12 @@
+@prefix fin:  <http://example.org/financial-operations#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+fin:Op_ValidDemo a fin:FinancialOperation ;
+    fin:amount "1200"^^xsd:decimal ;
+    fin:belongsToAccount fin:Acc_ValidDemo .
+
+fin:Acc_ValidDemo a fin:Account ;
+    fin:accountNumber "UA000VALID001"^^xsd:string .
+
+fin:Risk_ValidDemo a fin:Risk ;
+    fin:riskLevel "низький"^^xsd:string .

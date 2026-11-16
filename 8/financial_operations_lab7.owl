@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/financial-operations#"
+     xml:base="http://example.org/financial-operations"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/financial-operations">
+        <rdfs:label xml:lang="uk">Онтологія «Управління фінансовими операціями»</rdfs:label>
+        <rdfs:comment xml:lang="uk">Онтологія для лабораторних робіт №6–7 з курсу «Сховища знань та управління знаннями».</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="http://example.org/financial-operations#FinancialOperation">
+        <rdfs:label xml:lang="uk">Фінансова операція</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/financial-operations#belongsToAccount"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/financial-operations#belongsToCategory"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/financial-operations#hasCounterparty"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/financial-operations#amount"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Account">
+        <rdfs:label xml:lang="uk">Рахунок</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/financial-operations#accountNumber"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Counterparty">
+        <rdfs:label xml:lang="uk">Контрагент</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Category">
+        <rdfs:label xml:lang="uk">Категорія доходів/витрат</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Budget">
+        <rdfs:label xml:lang="uk">Бюджет</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/financial-operations#includesCategory"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#FinancialReport">
+        <rdfs:label xml:lang="uk">Фінансовий звіт</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/financial-operations#aggregates"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Risk">
+        <rdfs:label xml:lang="uk">Ризик</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/financial-operations#riskLevel"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Income">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:label xml:lang="uk">Дохід</rdfs:label>
+        <owl:disjointWith rdf:resource="http://example.org/financial-operations#Expense"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Expense">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:label xml:lang="uk">Витрата</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#CurrentAccount">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Account"/>
+        <rdfs:label xml:lang="uk">Поточний рахунок</rdfs:label>
+        <owl:disjointWith rdf:resource="http://example.org/financial-operations#SavingsAccount"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#SavingsAccount">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Account"/>
+        <rdfs:label xml:lang="uk">Накопичувальний рахунок</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Client">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Counterparty"/>
+        <rdfs:label xml:lang="uk">Клієнт</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Supplier">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Counterparty"/>
+        <rdfs:label xml:lang="uk">Постачальник</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#Bank">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Counterparty"/>
+        <rdfs:label xml:lang="uk">Банк</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#IncomeCategory">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:label xml:lang="uk">Категорія доходів</rdfs:label>
+        <owl:disjointWith rdf:resource="http://example.org/financial-operations#ExpenseCategory"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#ExpenseCategory">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:label xml:lang="uk">Категорія витрат</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#CashFlowReport">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#FinancialReport"/>
+        <rdfs:label xml:lang="uk">Звіт про рух коштів</rdfs:label>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#LiquidityRisk">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Risk"/>
+        <rdfs:label xml:lang="uk">Ризик ліквідності</rdfs:label>
+        <owl:disjointWith rdf:resource="http://example.org/financial-operations#CurrencyRisk"/>
+        <owl:disjointWith rdf:resource="http://example.org/financial-operations#ExpenseConcentrationRisk"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#CurrencyRisk">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Risk"/>
+        <rdfs:label xml:lang="uk">Валютний ризик</rdfs:label>
+        <owl:disjointWith rdf:resource="http://example.org/financial-operations#ExpenseConcentrationRisk"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/financial-operations#ExpenseConcentrationRisk">
+        <rdfs:subClassOf rdf:resource="http://example.org/financial-operations#Risk"/>
+        <rdfs:label xml:lang="uk">Ризик концентрації витрат</rdfs:label>
+    </owl:Class>
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/financial-operations#FinancialOperation"/>
+            <rdf:Description rdf:about="http://example.org/financial-operations#Account"/>
+            <rdf:Description rdf:about="http://example.org/financial-operations#Counterparty"/>
+            <rdf:Description rdf:about="http://example.org/financial-operations#Category"/>
+            <rdf:Description rdf:about="http://example.org/financial-operations#Budget"/>
+            <rdf:Description rdf:about="http://example.org/financial-operations#FinancialReport"/>
+            <rdf:Description rdf:about="http://example.org/financial-operations#Risk"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+    <!-- Object properties -->
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#belongsToAccount">
+        <owl:inverseOf rdf:resource="http://example.org/financial-operations#containsOperation"/>
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#Account"/>
+        <rdfs:label xml:lang="uk">належить рахунку</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#hasCounterparty">
+        <owl:inverseOf rdf:resource="http://example.org/financial-operations#participatesIn"/>
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#Counterparty"/>
+        <rdfs:label xml:lang="uk">здійснена з контрагентом</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#belongsToCategory">
+        <owl:inverseOf rdf:resource="http://example.org/financial-operations#classifiesOperation"/>
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:label xml:lang="uk">відноситься до категорії</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#includesCategory">
+        <owl:inverseOf rdf:resource="http://example.org/financial-operations#includedInBudget"/>
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Budget"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:label xml:lang="uk">включає категорію</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#aggregates">
+        <owl:inverseOf rdf:resource="http://example.org/financial-operations#aggregatedIn"/>
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialReport"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:label xml:lang="uk">агрегує операції</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#relatedToCategory">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Risk"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:label xml:lang="uk">пов'язаний з категорією</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#affectsBudget">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Risk"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#Budget"/>
+        <rdfs:label xml:lang="uk">впливає на бюджет</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#containsOperation">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Account"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:label xml:lang="uk">містить операції</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#participatesIn">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Counterparty"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:label xml:lang="uk">бере участь в операції</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#classifiesOperation">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:label xml:lang="uk">класифікує операцію</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#includedInBudget">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#Budget"/>
+        <rdfs:label xml:lang="uk">включена в бюджет</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://example.org/financial-operations#aggregatedIn">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:range rdf:resource="http://example.org/financial-operations#FinancialReport"/>
+        <rdfs:label xml:lang="uk">агрегована у звіті</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- Data properties -->
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#operationId">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">ID операції</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#operationDate">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="uk">дата операції</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#amount">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialOperation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="uk">сума</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#accountNumber">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Account"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">номер рахунку</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#currency">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Account"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">валюта</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#balance">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Account"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="uk">поточний залишок</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#counterpartyName">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Counterparty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">назва контрагента</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#edrpouCode">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Counterparty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">код ЄДРПОУ</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#categoryName">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">назва категорії</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#budgetLimit">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="uk">ліміт бюджету</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#period">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.org/financial-operations#Budget"/>
+                    <rdf:Description rdf:about="http://example.org/financial-operations#FinancialReport"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">період</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#plannedAmount">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Budget"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="uk">планова сума</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#actualAmount">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Budget"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="uk">фактична сума</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#deviation">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Budget"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="uk">відхилення</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#totalIncome">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="uk">загальний дохід</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#totalExpenses">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#FinancialReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="uk">загальні витрати</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#riskLevel">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">рівень ризику</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://example.org/financial-operations#riskDescription">
+        <rdfs:domain rdf:resource="http://example.org/financial-operations#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">опис ризику</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <!-- Individuals -->
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Op_00124">
+        <rdf:type rdf:resource="http://example.org/financial-operations#Income"/>
+        <rdfs:label xml:lang="uk">Операція 00124 (зарплата)</rdfs:label>
+        <belongsToAccount rdf:resource="http://example.org/financial-operations#Acc_UA123456789"/>
+        <hasCounterparty rdf:resource="http://example.org/financial-operations#Cp_Employer"/>
+        <belongsToCategory rdf:resource="http://example.org/financial-operations#Cat_Salary"/>
+        <operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00124</operationId>
+        <operationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-01T00:00:00</operationDate>
+        <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</amount>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Op_00125">
+        <rdf:type rdf:resource="http://example.org/financial-operations#Expense"/>
+        <rdfs:label xml:lang="uk">Операція 00125 (оренда)</rdfs:label>
+        <belongsToAccount rdf:resource="http://example.org/financial-operations#Acc_UA123456789"/>
+        <hasCounterparty rdf:resource="http://example.org/financial-operations#Cp_Orendodavets"/>
+        <belongsToCategory rdf:resource="http://example.org/financial-operations#Cat_Rent"/>
+        <operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00125</operationId>
+        <operationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-02T00:00:00</operationDate>
+        <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15000</amount>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Op_00126">
+        <rdf:type rdf:resource="http://example.org/financial-operations#Expense"/>
+        <rdfs:label xml:lang="uk">Операція 00126 (транспорт)</rdfs:label>
+        <belongsToAccount rdf:resource="http://example.org/financial-operations#Acc_UA123456789"/>
+        <belongsToCategory rdf:resource="http://example.org/financial-operations#Cat_Transport"/>
+        <operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00126</operationId>
+        <operationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-03T00:00:00</operationDate>
+        <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000</amount>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Op_00127">
+        <rdf:type rdf:resource="http://example.org/financial-operations#Expense"/>
+        <rdfs:label xml:lang="uk">Операція 00127 (харчування)</rdfs:label>
+        <belongsToAccount rdf:resource="http://example.org/financial-operations#Acc_UA123456789"/>
+        <belongsToCategory rdf:resource="http://example.org/financial-operations#Cat_Food"/>
+        <operationId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00127</operationId>
+        <operationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-05T00:00:00</operationDate>
+        <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</amount>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Acc_UA123456789">
+        <rdf:type rdf:resource="http://example.org/financial-operations#CurrentAccount"/>
+        <rdfs:label xml:lang="uk">Поточний рахунок UA123456789</rdfs:label>
+        <accountNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UA123456789</accountNumber>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UAH</currency>
+        <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9000</balance>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Acc_Savings_UA987654321">
+        <rdf:type rdf:resource="http://example.org/financial-operations#SavingsAccount"/>
+        <rdfs:label xml:lang="uk">Накопичувальний рахунок UA987654321</rdfs:label>
+        <accountNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UA987654321</accountNumber>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UAH</currency>
+        <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5000</balance>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Cp_Employer">
+        <rdf:type rdf:resource="http://example.org/financial-operations#Client"/>
+        <rdfs:label xml:lang="uk">ТОВ «Роботодавець»</rdfs:label>
+        <counterpartyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ТОВ «Роботодавець»</counterpartyName>
+        <edrpouCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">87654321</edrpouCode>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Cp_Orendodavets">
+        <rdf:type rdf:resource="http://example.org/financial-operations#Supplier"/>
+        <rdfs:label xml:lang="uk">ТОВ «Орендодавець»</rdfs:label>
+        <counterpartyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ТОВ «Орендодавець»</counterpartyName>
+        <edrpouCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345678</edrpouCode>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Cat_Salary">
+        <rdf:type rdf:resource="http://example.org/financial-operations#IncomeCategory"/>
+        <rdfs:label xml:lang="uk">Заробітна плата</rdfs:label>
+        <categoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Заробітна плата</categoryName>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Cat_Rent">
+        <rdf:type rdf:resource="http://example.org/financial-operations#ExpenseCategory"/>
+        <rdfs:label xml:lang="uk">Оренда</rdfs:label>
+        <categoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Оренда</categoryName>
+        <budgetLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15000</budgetLimit>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Cat_Transport">
+        <rdf:type rdf:resource="http://example.org/financial-operations#ExpenseCategory"/>
+        <rdfs:label xml:lang="uk">Транспорт</rdfs:label>
+        <categoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Транспорт</categoryName>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Cat_Food">
+        <rdf:type rdf:resource="http://example.org/financial-operations#ExpenseCategory"/>
+        <rdfs:label xml:lang="uk">Харчування</rdfs:label>
+        <categoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Харчування</categoryName>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Budget_Sep2026">
+        <rdf:type rdf:resource="http://example.org/financial-operations#Budget"/>
+        <rdfs:label xml:lang="uk">Бюджет вересень 2026</rdfs:label>
+        <includesCategory rdf:resource="http://example.org/financial-operations#Cat_Rent"/>
+        <includesCategory rdf:resource="http://example.org/financial-operations#Cat_Transport"/>
+        <includesCategory rdf:resource="http://example.org/financial-operations#Cat_Food"/>
+        <period rdf:datatype="http://www.w3.org/2001/XMLSchema#string">вересень 2026</period>
+        <plannedAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20000</plannedAmount>
+        <actualAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21000</actualAmount>
+        <deviation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</deviation>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Report_CF_Sep2026">
+        <rdf:type rdf:resource="http://example.org/financial-operations#CashFlowReport"/>
+        <rdfs:label xml:lang="uk">Звіт про рух коштів, вересень 2026</rdfs:label>
+        <aggregates rdf:resource="http://example.org/financial-operations#Op_00124"/>
+        <aggregates rdf:resource="http://example.org/financial-operations#Op_00125"/>
+        <aggregates rdf:resource="http://example.org/financial-operations#Op_00126"/>
+        <aggregates rdf:resource="http://example.org/financial-operations#Op_00127"/>
+        <period rdf:datatype="http://www.w3.org/2001/XMLSchema#string">вересень 2026</period>
+        <totalIncome rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</totalIncome>
+        <totalExpenses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21000</totalExpenses>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://example.org/financial-operations#Risk_RentConcentration">
+        <rdf:type rdf:resource="http://example.org/financial-operations#ExpenseConcentrationRisk"/>
+        <rdfs:label xml:lang="uk">Концентрація витрат на оренді</rdfs:label>
+        <relatedToCategory rdf:resource="http://example.org/financial-operations#Cat_Rent"/>
+        <affectsBudget rdf:resource="http://example.org/financial-operations#Budget_Sep2026"/>
+        <riskLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">високий</riskLevel>
+        <riskDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">частка оренди понад 70% усіх витрат</riskDescription>
+    </owl:NamedIndividual>
+</rdf:RDF>

@@ -1,0 +1,287 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fin: <http://example.org/financial-operations#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/financial-operations> a owl:Ontology ;
+    rdfs:label "Онтологія «Управління фінансовими операціями»"@uk ;
+    rdfs:comment "Словник RDF-сховища (ЛР8): класи/властивості з ЛР7 плюс вирівнювання зі SKOS, FOAF, DCTERMS, PROV."@uk .
+
+fin:Bank a owl:Class ;
+    rdfs:label "Банк"@uk ;
+    rdfs:subClassOf fin:Counterparty .
+
+fin:CashFlowReport a owl:Class ;
+    rdfs:label "Звіт про рух коштів"@uk ;
+    rdfs:subClassOf fin:FinancialReport .
+
+fin:Client a owl:Class ;
+    rdfs:label "Клієнт"@uk ;
+    rdfs:subClassOf fin:Counterparty .
+
+fin:CurrentAccount a owl:Class ;
+    rdfs:label "Поточний рахунок"@uk ;
+    rdfs:subClassOf fin:Account ;
+    owl:disjointWith fin:SavingsAccount .
+
+fin:Income a owl:Class ;
+    rdfs:label "Дохід"@uk ;
+    rdfs:subClassOf fin:FinancialOperation ;
+    owl:disjointWith fin:Expense .
+
+fin:IncomeCategory a owl:Class ;
+    rdfs:label "Категорія доходів"@uk ;
+    rdfs:subClassOf fin:Category ;
+    owl:disjointWith fin:ExpenseCategory .
+
+fin:LiquidityRisk a owl:Class ;
+    rdfs:label "Ризик ліквідності"@uk ;
+    rdfs:subClassOf fin:Risk ;
+    owl:disjointWith fin:CurrencyRisk,
+        fin:ExpenseConcentrationRisk .
+
+fin:Supplier a owl:Class ;
+    rdfs:label "Постачальник"@uk ;
+    rdfs:subClassOf fin:Counterparty .
+
+fin:actualAmount a owl:DatatypeProperty ;
+    rdfs:label "фактична сума"@uk ;
+    rdfs:domain fin:Budget ;
+    rdfs:range xsd:decimal .
+
+fin:affectsBudget a owl:ObjectProperty ;
+    rdfs:label "впливає на бюджет"@uk ;
+    rdfs:domain fin:Risk ;
+    rdfs:range fin:Budget .
+
+fin:balance a owl:DatatypeProperty ;
+    rdfs:label "поточний залишок"@uk ;
+    rdfs:domain fin:Account ;
+    rdfs:range xsd:decimal .
+
+fin:budgetLimit a owl:DatatypeProperty ;
+    rdfs:label "ліміт бюджету"@uk ;
+    rdfs:domain fin:Category ;
+    rdfs:range xsd:decimal .
+
+fin:categoryName a owl:DatatypeProperty ;
+    rdfs:label "назва категорії"@uk ;
+    rdfs:domain fin:Category ;
+    rdfs:range xsd:string ;
+    owl:equivalentProperty skos:prefLabel .
+
+fin:counterpartyName a owl:DatatypeProperty ;
+    rdfs:label "назва контрагента"@uk ;
+    rdfs:domain fin:Counterparty ;
+    rdfs:range xsd:string ;
+    owl:equivalentProperty foaf:name .
+
+fin:currency a owl:DatatypeProperty ;
+    rdfs:label "валюта"@uk ;
+    rdfs:domain fin:Account ;
+    rdfs:range xsd:string .
+
+fin:deviation a owl:DatatypeProperty ;
+    rdfs:label "відхилення"@uk ;
+    rdfs:domain fin:Budget ;
+    rdfs:range xsd:decimal .
+
+fin:edrpouCode a owl:DatatypeProperty ;
+    rdfs:label "код ЄДРПОУ"@uk ;
+    rdfs:domain fin:Counterparty ;
+    rdfs:range xsd:string .
+
+fin:operationDate a owl:DatatypeProperty ;
+    rdfs:label "дата операції"@uk ;
+    rdfs:comment "Дата операції еквівалентна dcterms:date."@uk ;
+    rdfs:domain fin:FinancialOperation ;
+    rdfs:range xsd:dateTime ;
+    owl:equivalentProperty dcterms:date .
+
+fin:operationId a owl:DatatypeProperty ;
+    rdfs:label "ID операції"@uk ;
+    rdfs:domain fin:FinancialOperation ;
+    rdfs:range xsd:string .
+
+fin:period a owl:DatatypeProperty ;
+    rdfs:label "період"@uk ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( fin:Budget fin:FinancialReport ) ] ;
+    rdfs:range xsd:string .
+
+fin:plannedAmount a owl:DatatypeProperty ;
+    rdfs:label "планова сума"@uk ;
+    rdfs:domain fin:Budget ;
+    rdfs:range xsd:decimal .
+
+fin:relatedToCategory a owl:ObjectProperty ;
+    rdfs:label "пов'язаний з категорією"@uk ;
+    rdfs:domain fin:Risk ;
+    rdfs:range fin:Category .
+
+fin:riskDescription a owl:DatatypeProperty ;
+    rdfs:label "опис ризику"@uk ;
+    rdfs:domain fin:Risk ;
+    rdfs:range xsd:string .
+
+fin:totalExpenses a owl:DatatypeProperty ;
+    rdfs:label "загальні витрати"@uk ;
+    rdfs:domain fin:FinancialReport ;
+    rdfs:range xsd:decimal .
+
+fin:totalIncome a owl:DatatypeProperty ;
+    rdfs:label "загальний дохід"@uk ;
+    rdfs:domain fin:FinancialReport ;
+    rdfs:range xsd:decimal .
+
+fin:CurrencyRisk a owl:Class ;
+    rdfs:label "Валютний ризик"@uk ;
+    rdfs:subClassOf fin:Risk ;
+    owl:disjointWith fin:ExpenseConcentrationRisk .
+
+fin:Expense a owl:Class ;
+    rdfs:label "Витрата"@uk ;
+    rdfs:subClassOf fin:FinancialOperation .
+
+fin:ExpenseCategory a owl:Class ;
+    rdfs:label "Категорія витрат"@uk ;
+    rdfs:subClassOf fin:Category .
+
+fin:SavingsAccount a owl:Class ;
+    rdfs:label "Накопичувальний рахунок"@uk ;
+    rdfs:subClassOf fin:Account .
+
+fin:accountNumber a owl:DatatypeProperty ;
+    rdfs:label "номер рахунку"@uk ;
+    rdfs:domain fin:Account ;
+    rdfs:range xsd:string .
+
+fin:aggregatedIn a owl:ObjectProperty ;
+    rdfs:label "агрегована у звіті"@uk ;
+    rdfs:domain fin:FinancialOperation ;
+    rdfs:range fin:FinancialReport .
+
+fin:aggregates a owl:ObjectProperty ;
+    rdfs:label "агрегує операції"@uk ;
+    rdfs:domain fin:FinancialReport ;
+    rdfs:range fin:FinancialOperation ;
+    owl:inverseOf fin:aggregatedIn .
+
+fin:amount a owl:DatatypeProperty ;
+    rdfs:label "сума"@uk ;
+    rdfs:domain fin:FinancialOperation ;
+    rdfs:range xsd:decimal .
+
+fin:belongsToAccount a owl:ObjectProperty ;
+    rdfs:label "належить рахунку"@uk ;
+    rdfs:domain fin:FinancialOperation ;
+    rdfs:range fin:Account ;
+    owl:inverseOf fin:containsOperation .
+
+fin:belongsToCategory a owl:ObjectProperty ;
+    rdfs:label "відноситься до категорії"@uk ;
+    rdfs:domain fin:FinancialOperation ;
+    rdfs:range fin:Category ;
+    owl:inverseOf fin:classifiesOperation .
+
+fin:classifiesOperation a owl:ObjectProperty ;
+    rdfs:label "класифікує операцію"@uk ;
+    rdfs:domain fin:Category ;
+    rdfs:range fin:FinancialOperation .
+
+fin:containsOperation a owl:ObjectProperty ;
+    rdfs:label "містить операції"@uk ;
+    rdfs:domain fin:Account ;
+    rdfs:range fin:FinancialOperation .
+
+fin:hasCounterparty a owl:ObjectProperty ;
+    rdfs:label "здійснена з контрагентом"@uk ;
+    rdfs:domain fin:FinancialOperation ;
+    rdfs:range fin:Counterparty ;
+    rdfs:subPropertyOf prov:wasAssociatedWith ;
+    owl:inverseOf fin:participatesIn .
+
+fin:includedInBudget a owl:ObjectProperty ;
+    rdfs:label "включена в бюджет"@uk ;
+    rdfs:domain fin:Category ;
+    rdfs:range fin:Budget .
+
+fin:includesCategory a owl:ObjectProperty ;
+    rdfs:label "включає категорію"@uk ;
+    rdfs:domain fin:Budget ;
+    rdfs:range fin:Category ;
+    owl:inverseOf fin:includedInBudget .
+
+fin:participatesIn a owl:ObjectProperty ;
+    rdfs:label "бере участь в операції"@uk ;
+    rdfs:domain fin:Counterparty ;
+    rdfs:range fin:FinancialOperation .
+
+fin:riskLevel a owl:DatatypeProperty ;
+    rdfs:label "рівень ризику"@uk ;
+    rdfs:domain fin:Risk ;
+    rdfs:range xsd:string .
+
+fin:ExpenseConcentrationRisk a owl:Class ;
+    rdfs:label "Ризик концентрації витрат"@uk ;
+    rdfs:subClassOf fin:Risk .
+
+fin:FinancialReport a owl:Class ;
+    rdfs:label "Фінансовий звіт"@uk ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty fin:aggregates ] .
+
+fin:Account a owl:Class ;
+    rdfs:label "Рахунок"@uk ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty fin:accountNumber ] .
+
+fin:Budget a owl:Class ;
+    rdfs:label "Бюджет"@uk ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty fin:includesCategory ] .
+
+fin:Counterparty a owl:Class ;
+    rdfs:label "Контрагент"@uk ;
+    rdfs:comment "Контрагент вирівняний з foaf:Organization."@uk ;
+    rdfs:subClassOf foaf:Organization .
+
+fin:Risk a owl:Class ;
+    rdfs:label "Ризик"@uk ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty fin:riskLevel ] .
+
+fin:Category a owl:Class ;
+    rdfs:label "Категорія доходів/витрат"@uk ;
+    rdfs:comment "Категорія доходів/витрат вирівняна зі skos:Concept; назва — skos:prefLabel."@uk ;
+    rdfs:subClassOf skos:Concept .
+
+fin:FinancialOperation a owl:Class ;
+    rdfs:label "Фінансова операція"@uk ;
+    rdfs:comment "Фінансова операція як prov:Activity (PROV-O)."@uk ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty fin:amount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty fin:hasCounterparty ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty fin:belongsToCategory ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty fin:belongsToAccount ],
+        prov:Activity .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( fin:FinancialOperation fin:Account fin:Counterparty fin:Category fin:Budget fin:FinancialReport fin:Risk ) .
+

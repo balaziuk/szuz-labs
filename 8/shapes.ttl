@@ -1,0 +1,48 @@
+@prefix fin:   <http://example.org/financial-operations#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+fin:FinancialOperationShape
+    a sh:NodeShape ;
+    sh:targetClass fin:FinancialOperation ;
+    rdfs:label "Форма фінансової операції"@uk ;
+    sh:property [
+        sh:path fin:amount ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minExclusive 0 ;
+        sh:message "Операція повинна мати рівно одну додатну суму (amount > 0)."@uk ;
+    ] ;
+    sh:property [
+        sh:path fin:belongsToAccount ;
+        sh:class fin:Account ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Операція повинна бути прив'язана рівно до одного рахунку."@uk ;
+    ] .
+
+fin:RiskShape
+    a sh:NodeShape ;
+    sh:targetClass fin:Risk ;
+    rdfs:label "Форма ризику"@uk ;
+    sh:property [
+        sh:path fin:riskLevel ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Ризик повинен мати рівно один рівень (riskLevel)."@uk ;
+    ] .
+
+fin:AccountShape
+    a sh:NodeShape ;
+    sh:targetClass fin:Account ;
+    rdfs:label "Форма рахунку"@uk ;
+    sh:property [
+        sh:path fin:accountNumber ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Рахунок повинен мати обов'язковий номер (accountNumber)."@uk ;
+    ] .

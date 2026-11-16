@@ -1,0 +1,30 @@
+@prefix fin: <http://example.org/financial-operations#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix src: <http://example.org/financial-operations/source#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/financial-operations/graph/bank-export-2026> {
+    fin:Op_00124 prov:wasDerivedFrom src:BankExport2026 .
+
+    fin:Op_00125 prov:wasDerivedFrom src:BankExport2026 .
+
+    fin:Op_00126 prov:wasDerivedFrom src:BankExport2026 .
+
+    fin:Op_00127 prov:wasDerivedFrom src:BankExport2026 .
+
+    fin:Op_00128 prov:wasDerivedFrom src:BankExport2026 .
+
+    fin:Op_00129 prov:wasDerivedFrom src:BankExport2026 .
+
+    fin:Op_00130 prov:wasDerivedFrom src:BankExport2026 .
+
+    fin:Op_00131 prov:wasDerivedFrom src:BankExport2026 .
+
+    src:BankExport2026 a prov:Entity ;
+        rdfs:label "Експорт банківських операцій 2026"@uk ;
+        fin:period "вересень–жовтень 2026"^^xsd:string ;
+        prov:generatedAtTime "2026-10-15T12:00:00"^^xsd:dateTime ;
+        prov:wasAttributedTo fin:Cp_Employer .
+}
+

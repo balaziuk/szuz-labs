@@ -1,0 +1,82 @@
+PREFIX fin:     <http://example.org/financial-operations#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# BEGIN Q1
+SELECT ?op ?amount ?date ?category
+WHERE {
+  ?op a fin:Expense ;
+      fin:amount ?amount ;
+      fin:operationDate ?date ;
+      fin:belongsToCategory ?cat .
+  OPTIONAL { ?cat skos:prefLabel ?category }
+  FILTER (?date >= "2026-09-01T00:00:00"^^xsd:dateTime
+      && ?date <  "2026-10-01T00:00:00"^^xsd:dateTime)
+}
+ORDER BY ?date
+# END Q1
+
+# BEGIN Q2
+SELECT ?op ?opId ?amount ?counterpartyName
+WHERE {
+  { ?op a fin:Income } UNION { ?op a fin:Expense }
+  ?op fin:operationId ?opId ;
+      fin:amount ?amount .
+  OPTIONAL {
+    ?op fin:hasCounterparty ?cp .
+    ?cp foaf:name ?counterpartyName .
+  }
+}
+ORDER BY ?opId
+# END Q2
+
+# BEGIN Q3
+SELECT ?category (SUM(?amount) AS ?catSum)
+       ((SUM(?amount) * 100.0 / ?total) AS ?percentOfTotal)
+WHERE {
+  ?op a fin:Expense ;
+      fin:amount ?amount ;
+      fin:belongsToCategory ?cat .
+  ?cat skos:prefLabel ?category .
+  {
+    SELECT (SUM(?a) AS ?total) WHERE {
+      ?o a fin:Expense ; fin:amount ?a .
+    }
+  }
+}
+GROUP BY ?category ?total
+ORDER BY DESC(?catSum)
+# END Q3
+
+# BEGIN Q4
+SELECT ?budget ?period ?planned ?actual ?deviation
+WHERE {
+  ?budget a fin:Budget ;
+          fin:period ?period ;
+          fin:plannedAmount ?planned ;
+          fin:actualAmount ?actual ;
+          fin:deviation ?deviation .
+  FILTER (?actual > ?planned)
+}
+# END Q4
+
+# BEGIN Q5
+ASK {
+  ?budget a fin:Budget ;
+          fin:plannedAmount ?planned ;
+          fin:actualAmount ?actual .
+  FILTER (?actual > ?planned)
+}
+# END Q5
+
+# BEGIN Q6
+CONSTRUCT {
+  ?account fin:containsOperation ?op .
+}
+WHERE {
+  ?op fin:belongsToAccount ?account .
+}
+# END Q6
