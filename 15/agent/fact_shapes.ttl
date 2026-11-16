@@ -1,0 +1,58 @@
+@prefix hub:  <http://example.org/hub#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Будь-яка пропозиція: джерело, вид, хто запропонував.
+hub:ProposedFactShape a sh:NodeShape ;
+    sh:targetClass hub:ProposedFact ;
+    sh:property [
+        sh:path prov:wasDerivedFrom ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Пропозиція має джерело (prov:wasDerivedFrom)." ;
+    ] ;
+    sh:property [
+        sh:path hub:kind ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( "alias" "amount_note" "identifier_change" ) ;
+        sh:message "Вид факту: alias, amount_note або identifier_change." ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAttributedTo ;
+        sh:minCount 1 ;
+        sh:message "Відомо, хто запропонував факт." ;
+    ] .
+
+# Аліас указує на наявного контрагента з реєстру.
+hub:AliasShape a sh:NodeShape ;
+    sh:targetSubjectsOf hub:surface ;
+    sh:property [
+        sh:path hub:surface ;
+        sh:datatype xsd:string ;
+        sh:minLength 2 ;
+        sh:message "Поверхнева форма аліаса — рядок від 2 символів." ;
+    ] ;
+    sh:property [
+        sh:path hub:target ;
+        sh:minCount 1 ;
+        sh:class hub:Counterparty ;
+        sh:message "Аліас має вказувати на контрагента з реєстру ЛР9." ;
+    ] .
+
+hub:AmountShape a sh:NodeShape ;
+    sh:targetSubjectsOf hub:amount ;
+    sh:property [
+        sh:path hub:amount ;
+        sh:datatype xsd:decimal ;
+        sh:minExclusive 0 ;
+        sh:message "Сума — додатне десяткове число." ;
+    ] .
+
+hub:EdrpouShape a sh:NodeShape ;
+    sh:targetSubjectsOf hub:edrpou ;
+    sh:property [
+        sh:path hub:edrpou ;
+        sh:pattern "^[0-9]{8}$" ;
+        sh:message "ЄДРПОУ — вісім цифр." ;
+    ] .

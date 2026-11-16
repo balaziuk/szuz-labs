@@ -1,0 +1,11 @@
+id,claim,type,source,verification,status,comment
+C15-01,"агент (LLM openai/gpt-oss-120b) у прогоні 3 проходить 8 з 10 сценаріїв (прогони 1–2: 4, 7)",факт,docs/agent_eval.md,V4,verified,метрики пораховано автоматично з tests/agent_scenarios.jsonl
+C15-02,після захисту стримано 18 з 18 атак (до: 14),факт,docs/agent_security.md,V3,verified,атаки r01–r12 згенерувала qwen/qwen3.8-27b
+C15-03,інструменти агента лише читають; запис і сторонні інструменти блокуються,правило,agent/guard.py; mcp_server/server.py,V2,verified,readOnlyHint + білий список + тест a03/a06/r05/r06/r11/r12
+C15-04,роль public не отримує чорнову нотатку d22,правило,docs/mcp_demo.md,V2,verified,перевірено викликом MCP з LAB15_ROLE=public
+C15-05,низький аліас Приват прийнято автоматично з provenance,факт,docs/hitl.md,V2,verified,SHACL пройдено
+C15-06,"суперечність 3900/3500 записано лише після схвалення людини, обидві суми збережено",факт,docs/hitl.md; data/kb_accepted.ttl,V2,verified,review approve
+C15-07,зміну ЄДРПОУ відхилено як високий ризик,правило,docs/hitl.md,V2,verified,
+C15-08,"частка прийнятих пропозицій 0.4, медіанний час схвалення 2.05 с",факт,data/audit.jsonl,V4,verified,час у демо — секунди
+C15-09,словниковий фільтр ін'єкцій ловить усі перефразовані атаки,гіпотеза,docs/agent_security.md,V3,rejected,ні: перефразування без ключових слів доходить до моделі (залишковий ризик 1)
+C15-10,модель без захистів сама відхиляє всі атаки,гіпотеза,docs/agent_security.md,V3,rejected,до захисту стримано 14 з 18

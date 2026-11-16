@@ -1,0 +1,382 @@
+{
+  "rows": [
+    {
+      "id": "q01",
+      "question": "Який ЄДРПОУ у Приват?",
+      "expected": "Cp_PrivatBank",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cp_PrivatBank"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_PrivatBank"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "judge": {
+        "seeds": [
+          "Cp_PrivatBank"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q02",
+      "question": "Скільки сплачено орендодавцю у жовтні 2026?",
+      "expected": "Cp_Orendodavets",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cp_Orendodavets",
+          "Cat_Rent"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_Orendodavets"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "judge": {
+        "seeds": [
+          "Cp_Orendodavets"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q03",
+      "question": "Що купували в сільпо у квітні?",
+      "expected": "Cp_Silpo",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cp_Silpo"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_Silpo"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "judge": {
+        "seeds": [
+          "Cp_Silpo"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q04",
+      "question": "Скільки платили ФОПу Іваненку?",
+      "expected": "Cp_FreelanceClient",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_FreelanceClient"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "judge": {
+        "seeds": [
+          "Cp_FreelanceClient"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q05",
+      "question": "Скільки коштує київстар на місяць?",
+      "expected": "Cp_Kyivstar",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cp_Kyivstar"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_Kyivstar",
+          "Cp_Utility"
+        ],
+        "recall": 1.0,
+        "precision": 0.5,
+        "wrong": [
+          "Cp_Utility"
+        ]
+      },
+      "judge": {
+        "seeds": [
+          "Cp_Kyivstar"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q06",
+      "question": "Які поїздки були через уклон?",
+      "expected": "Cp_Uklon",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cp_Uklon"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_Uklon"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "judge": {
+        "seeds": [
+          "Cp_Uklon"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q07",
+      "question": "Скільки виставили Київські комунальні за жовтень?",
+      "expected": "Cp_Utility",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cat_Utilities"
+        ],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_Kyivstar",
+          "Cp_Utility"
+        ],
+        "recall": 1.0,
+        "precision": 0.5,
+        "wrong": [
+          "Cp_Kyivstar"
+        ]
+      },
+      "judge": {
+        "seeds": [
+          "Cp_Utility"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q08",
+      "question": "Що відомо про Діджитал Студіо?",
+      "expected": "Cp_DigitalStudio",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cp_DigitalStudio"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_DigitalStudio"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "judge": {
+        "seeds": [
+          "Cp_DigitalStudio"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q09",
+      "question": "Скільки витрачено в АТБ-Маркет?",
+      "expected": "Cp_ATB",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cp_ATB"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_ATB"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "judge": {
+        "seeds": [
+          "Cp_ATB"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    },
+    {
+      "id": "q10",
+      "question": "Чи купували ліки в Аптека АНЦ?",
+      "expected": "Cp_Apteka",
+      "registry": {
+        "seeds": [],
+        "recall": 0.0,
+        "precision": null,
+        "wrong": []
+      },
+      "lab11_synonyms": {
+        "seeds": [
+          "Cat_Health",
+          "Cp_Apteka"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "rule": {
+        "seeds": [
+          "Cp_Apteka"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      },
+      "judge": {
+        "seeds": [
+          "Cp_Apteka"
+        ],
+        "recall": 1.0,
+        "precision": 1.0,
+        "wrong": []
+      }
+    }
+  ],
+  "summary": {
+    "registry": {
+      "context_recall": 0.0,
+      "context_precision": null,
+      "wrong_seeds": 0
+    },
+    "lab11_synonyms": {
+      "context_recall": 0.8,
+      "context_precision": 1.0,
+      "wrong_seeds": 0
+    },
+    "rule": {
+      "context_recall": 1.0,
+      "context_precision": 0.9,
+      "wrong_seeds": 2
+    },
+    "judge": {
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "wrong_seeds": 0
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@prefix fin: <http://example.org/financial-operations#> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fin:OperationShape a sh:NodeShape ;
+    sh:targetClass fin:Expense ;
+    sh:property [
+        sh:path fin:amount ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:minExclusive 0 ;
+        sh:message "Витрата має додатну суму." ;
+    ] ;
+    sh:property [
+        sh:path fin:belongsToAccount ;
+        sh:minCount 1 ;
+        sh:message "Витрата має рахунок." ;
+    ] ;
+    sh:property [
+        sh:path fin:belongsToCategory ;
+        sh:minCount 1 ;
+        sh:message "Витрата має категорію." ;
+    ] .
+
+fin:AccountShape a sh:NodeShape ;
+    sh:targetClass fin:CurrentAccount ;
+    sh:property [
+        sh:path fin:accountNumber ;
+        sh:pattern "^UA[0-9]+$" ;
+        sh:minCount 1 ;
+        sh:message "Номер рахунку починається з UA." ;
+    ] .
+
+fin:CounterpartyShape a sh:NodeShape ;
+    sh:targetClass fin:Client ;
+    sh:property [
+        sh:path fin:edrpouCode ;
+        sh:pattern "^[0-9]{8}$" ;
+        sh:minCount 1 ;
+        sh:message "ЄДРПОУ — вісім цифр." ;
+    ] .

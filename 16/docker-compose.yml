@@ -1,0 +1,9 @@
+services:
+  demo:
+    build:
+      context: ..
+      dockerfile: 16/Dockerfile
+    environment:
+      SZUZ_LABS: /labs
+      PYTHONPATH: /labs/16:/labs/15
+    working_dir: /labs/16

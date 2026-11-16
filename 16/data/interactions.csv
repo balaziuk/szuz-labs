@@ -1,0 +1,294 @@
+user,doc,date,split,interests
+u01,d15,2026-04-14,train,Category:комунальні послуги|Category:заробітна плата
+u01,d21,2026-04-04,train,Category:комунальні послуги|Category:заробітна плата
+u01,d01,2026-05-11,train,Category:комунальні послуги|Category:заробітна плата
+u01,d02,2026-08-28,test,Category:комунальні послуги|Category:заробітна плата
+u01,d04,2026-08-30,test,Category:комунальні послуги|Category:заробітна плата
+u02,d01,2026-04-30,train,Counterparty:тов «роботодавець»|Category:заробітна плата
+u02,d21,2026-07-07,train,Counterparty:тов «роботодавець»|Category:заробітна плата
+u02,d18,2026-07-13,train,Counterparty:тов «роботодавець»|Category:заробітна плата
+u02,d02,2026-08-21,test,Counterparty:тов «роботодавець»|Category:заробітна плата
+u03,d05,2026-06-02,train,Counterparty:ат «київські комунальні»|Category:харчування
+u03,d20,2026-02-08,train,Counterparty:ат «київські комунальні»|Category:харчування
+u03,d04,2026-05-16,train,Counterparty:ат «київські комунальні»|Category:харчування
+u03,d15,2026-09-14,test,Counterparty:ат «київські комунальні»|Category:харчування
+u04,d09,2026-07-12,train,Category:фриланс|Category:заробітна плата
+u04,d21,2026-04-09,train,Category:фриланс|Category:заробітна плата
+u04,d02,2026-04-06,train,Category:фриланс|Category:заробітна плата
+u04,d01,2026-08-30,test,Category:фриланс|Category:заробітна плата
+u04,d11,2026-09-07,test,Category:фриланс|Category:заробітна плата
+u05,d20,2026-03-09,train,Category:комунальні послуги|Category:транспорт
+u05,d15,2026-07-04,train,Category:комунальні послуги|Category:транспорт
+u05,d07,2026-05-07,train,Category:комунальні послуги|Category:транспорт
+u05,d04,2026-08-10,test,Category:комунальні послуги|Category:транспорт
+u05,d18,2026-10-17,test,Category:комунальні послуги|Category:транспорт
+u06,d01,2026-05-07,train,Category:оренда|Category:транспорт
+u06,d07,2026-05-02,train,Category:оренда|Category:транспорт
+u06,d18,2026-07-15,train,Category:оренда|Category:транспорт
+u06,d12,2026-08-05,test,Category:оренда|Category:транспорт
+u06,d03,2026-09-10,test,Category:оренда|Category:транспорт
+u07,d14,2026-05-14,train,Counterparty:ат «київські комунальні»|Category:фриланс
+u07,d15,2026-07-14,train,Counterparty:ат «київські комунальні»|Category:фриланс
+u07,d20,2026-06-07,train,Counterparty:ат «київські комунальні»|Category:фриланс
+u07,d11,2026-10-08,test,Counterparty:ат «київські комунальні»|Category:фриланс
+u07,d04,2026-09-03,test,Counterparty:ат «київські комунальні»|Category:фриланс
+u08,d01,2026-07-26,train,Counterparty:ат «київські комунальні»|Counterparty:тов «роботодавець»
+u08,d15,2026-06-03,train,Counterparty:ат «київські комунальні»|Counterparty:тов «роботодавець»
+u08,d21,2026-06-16,train,Counterparty:ат «київські комунальні»|Counterparty:тов «роботодавець»
+u08,d02,2026-08-09,test,Counterparty:ат «київські комунальні»|Counterparty:тов «роботодавець»
+u08,d04,2026-09-19,test,Counterparty:ат «київські комунальні»|Counterparty:тов «роботодавець»
+u09,d03,2026-04-15,train,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u09,d01,2026-06-06,train,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u09,d15,2026-06-04,train,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u09,d19,2026-10-06,test,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u09,d04,2026-09-28,test,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u10,d11,2026-05-21,train,Category:заробітна плата|Category:фриланс
+u10,d18,2026-06-09,train,Category:заробітна плата|Category:фриланс
+u10,d09,2026-07-21,train,Category:заробітна плата|Category:фриланс
+u10,d01,2026-10-07,test,Category:заробітна плата|Category:фриланс
+u10,d02,2026-08-01,test,Category:заробітна плата|Category:фриланс
+u11,d04,2026-07-22,train,Category:харчування|Counterparty:тов «орендодавець»
+u11,d03,2026-06-12,train,Category:харчування|Counterparty:тов «орендодавець»
+u11,d05,2026-04-25,train,Category:харчування|Counterparty:тов «орендодавець»
+u11,d19,2026-10-03,test,Category:харчування|Counterparty:тов «орендодавець»
+u11,d01,2026-10-02,test,Category:харчування|Counterparty:тов «орендодавець»
+u12,d01,2026-05-15,train,Category:комунальні послуги|Category:оренда
+u12,d04,2026-05-02,train,Category:комунальні послуги|Category:оренда
+u12,d15,2026-05-08,train,Category:комунальні послуги|Category:оренда
+u12,d13,2026-10-03,test,Category:комунальні послуги|Category:оренда
+u12,d03,2026-09-13,test,Category:комунальні послуги|Category:оренда
+u13,d18,2026-07-20,train,Category:заробітна плата|Category:транспорт
+u13,d07,2026-05-15,train,Category:заробітна плата|Category:транспорт
+u13,d01,2026-05-09,train,Category:заробітна плата|Category:транспорт
+u13,d21,2026-10-05,test,Category:заробітна плата|Category:транспорт
+u13,d02,2026-08-31,test,Category:заробітна плата|Category:транспорт
+u14,d01,2026-05-12,train,Category:фриланс|Counterparty:тов «орендодавець»
+u14,d11,2026-07-24,train,Category:фриланс|Counterparty:тов «орендодавець»
+u14,d09,2026-06-07,train,Category:фриланс|Counterparty:тов «орендодавець»
+u14,d19,2026-10-12,test,Category:фриланс|Counterparty:тов «орендодавець»
+u14,d14,2026-09-24,test,Category:фриланс|Counterparty:тов «орендодавець»
+u15,d04,2026-04-25,train,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u15,d03,2026-06-08,train,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u15,d15,2026-06-06,train,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u15,d19,2026-10-05,test,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u15,d01,2026-09-24,test,Counterparty:ат «київські комунальні»|Counterparty:тов «орендодавець»
+u16,d14,2026-05-10,train,Category:оренда|Category:фриланс
+u16,d12,2026-06-20,train,Category:оренда|Category:фриланс
+u16,d09,2026-04-20,train,Category:оренда|Category:фриланс
+u16,d11,2026-08-22,test,Category:оренда|Category:фриланс
+u16,d13,2026-10-13,test,Category:оренда|Category:фриланс
+u17,d01,2026-06-09,train,Category:заробітна плата|Counterparty:ат «київські комунальні»
+u17,d02,2026-04-08,train,Category:заробітна плата|Counterparty:ат «київські комунальні»
+u17,d18,2026-04-07,train,Category:заробітна плата|Counterparty:ат «київські комунальні»
+u17,d15,2026-10-14,test,Category:заробітна плата|Counterparty:ат «київські комунальні»
+u17,d20,2026-10-01,test,Category:заробітна плата|Counterparty:ат «київські комунальні»
+u18,d02,2026-06-14,train,Counterparty:тов «роботодавець»|Category:оренда
+u18,d03,2026-06-16,train,Counterparty:тов «роботодавець»|Category:оренда
+u18,d12,2026-05-05,train,Counterparty:тов «роботодавець»|Category:оренда
+u18,d19,2026-10-20,test,Counterparty:тов «роботодавець»|Category:оренда
+u18,d13,2026-10-03,test,Counterparty:тов «роботодавець»|Category:оренда
+u19,d20,2026-02-17,train,Counterparty:ат «київські комунальні»|Category:харчування
+u19,d05,2026-07-09,train,Counterparty:ат «київські комунальні»|Category:харчування
+u19,d04,2026-06-22,train,Counterparty:ат «київські комунальні»|Category:харчування
+u19,d15,2026-09-08,test,Counterparty:ат «київські комунальні»|Category:харчування
+u20,d04,2026-06-04,train,Counterparty:тов «орендодавець»|Category:харчування
+u20,d03,2026-05-04,train,Counterparty:тов «орендодавець»|Category:харчування
+u20,d05,2026-05-01,train,Counterparty:тов «орендодавець»|Category:харчування
+u20,d01,2026-09-14,test,Counterparty:тов «орендодавець»|Category:харчування
+u20,d19,2026-10-03,test,Counterparty:тов «орендодавець»|Category:харчування
+u21,d18,2026-06-25,train,Category:транспорт|Category:харчування
+u21,d05,2026-07-28,train,Category:транспорт|Category:харчування
+u21,d04,2026-06-10,train,Category:транспорт|Category:харчування
+u21,d07,2026-09-08,test,Category:транспорт|Category:харчування
+u22,d15,2026-04-21,train,Category:комунальні послуги|Category:оренда
+u22,d20,2026-06-26,train,Category:комунальні послуги|Category:оренда
+u22,d12,2026-06-23,train,Category:комунальні послуги|Category:оренда
+u22,d13,2026-10-09,test,Category:комунальні послуги|Category:оренда
+u22,d01,2026-08-06,test,Category:комунальні послуги|Category:оренда
+u23,d01,2026-07-27,train,Category:заробітна плата|Category:харчування
+u23,d05,2026-05-04,train,Category:заробітна плата|Category:харчування
+u23,d18,2026-06-09,train,Category:заробітна плата|Category:харчування
+u23,d02,2026-08-05,test,Category:заробітна плата|Category:харчування
+u23,d04,2026-09-17,test,Category:заробітна плата|Category:харчування
+u24,d21,2026-06-19,train,Counterparty:тов «роботодавець»|Category:оренда
+u24,d03,2026-07-05,train,Counterparty:тов «роботодавець»|Category:оренда
+u24,d18,2026-04-20,train,Counterparty:тов «роботодавець»|Category:оренда
+u24,d12,2026-08-31,test,Counterparty:тов «роботодавець»|Category:оренда
+u24,d19,2026-10-06,test,Counterparty:тов «роботодавець»|Category:оренда
+u25,d18,2026-04-29,train,Category:оренда|Counterparty:ат «київські комунальні»
+u25,d20,2026-03-07,train,Category:оренда|Counterparty:ат «київські комунальні»
+u25,d15,2026-07-23,train,Category:оренда|Counterparty:ат «київські комунальні»
+u25,d19,2026-10-15,test,Category:оренда|Counterparty:ат «київські комунальні»
+u25,d03,2026-09-14,test,Category:оренда|Counterparty:ат «київські комунальні»
+u26,d18,2026-07-08,train,Category:фриланс|Category:транспорт
+u26,d14,2026-05-18,train,Category:фриланс|Category:транспорт
+u26,d11,2026-06-14,train,Category:фриланс|Category:транспорт
+u26,d07,2026-10-05,test,Category:фриланс|Category:транспорт
+u26,d09,2026-09-21,test,Category:фриланс|Category:транспорт
+u27,d04,2026-06-16,train,Counterparty:тов «роботодавець»|Category:харчування
+u27,d05,2026-06-09,train,Counterparty:тов «роботодавець»|Category:харчування
+u27,d02,2026-05-15,train,Counterparty:тов «роботодавець»|Category:харчування
+u27,d01,2026-09-10,test,Counterparty:тов «роботодавець»|Category:харчування
+u27,d21,2026-09-25,test,Counterparty:тов «роботодавець»|Category:харчування
+u28,d04,2026-05-17,train,Counterparty:тов «роботодавець»|Category:комунальні послуги
+u28,d01,2026-06-24,train,Counterparty:тов «роботодавець»|Category:комунальні послуги
+u28,d21,2026-04-09,train,Counterparty:тов «роботодавець»|Category:комунальні послуги
+u28,d02,2026-09-12,test,Counterparty:тов «роботодавець»|Category:комунальні послуги
+u28,d20,2026-10-19,test,Counterparty:тов «роботодавець»|Category:комунальні послуги
+u29,d04,2026-06-29,train,Category:харчування|Category:комунальні послуги
+u29,d05,2026-05-22,train,Category:харчування|Category:комунальні послуги
+u29,d20,2026-06-05,train,Category:харчування|Category:комунальні послуги
+u29,d15,2026-08-17,test,Category:харчування|Category:комунальні послуги
+u30,d04,2026-04-27,train,Category:транспорт|Counterparty:ат «київські комунальні»
+u30,d20,2026-05-05,train,Category:транспорт|Counterparty:ат «київські комунальні»
+u30,d15,2026-07-19,train,Category:транспорт|Counterparty:ат «київські комунальні»
+u30,d07,2026-10-14,test,Category:транспорт|Counterparty:ат «київські комунальні»
+u30,d18,2026-10-17,test,Category:транспорт|Counterparty:ат «київські комунальні»
+u31,d04,2026-06-24,train,Category:харчування|Counterparty:тов «орендодавець»
+u31,d01,2026-05-10,train,Category:харчування|Counterparty:тов «орендодавець»
+u31,d03,2026-05-07,train,Category:харчування|Counterparty:тов «орендодавець»
+u31,d05,2026-10-05,test,Category:харчування|Counterparty:тов «орендодавець»
+u31,d19,2026-10-20,test,Category:харчування|Counterparty:тов «орендодавець»
+u32,d04,2026-04-04,train,Category:харчування|Category:комунальні послуги
+u32,d20,2026-01-26,train,Category:харчування|Category:комунальні послуги
+u32,d15,2026-05-11,train,Category:харчування|Category:комунальні послуги
+u32,d05,2026-09-30,test,Category:харчування|Category:комунальні послуги
+u33,d01,2026-05-13,train,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u33,d20,2026-05-03,train,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u33,d04,2026-04-29,train,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u33,d19,2026-10-06,test,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u33,d03,2026-10-06,test,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u34,d03,2026-07-16,train,Counterparty:тов «орендодавець»|Category:заробітна плата
+u34,d18,2026-07-26,train,Counterparty:тов «орендодавець»|Category:заробітна плата
+u34,d01,2026-07-09,train,Counterparty:тов «орендодавець»|Category:заробітна плата
+u34,d19,2026-10-15,test,Counterparty:тов «орендодавець»|Category:заробітна плата
+u34,d21,2026-08-21,test,Counterparty:тов «орендодавець»|Category:заробітна плата
+u35,d21,2026-05-06,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u35,d02,2026-05-27,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u35,d01,2026-05-09,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u35,d03,2026-09-06,test,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u35,d19,2026-10-08,test,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u36,d05,2026-07-14,train,Category:фриланс|Category:харчування
+u36,d14,2026-05-10,train,Category:фриланс|Category:харчування
+u36,d11,2026-05-09,train,Category:фриланс|Category:харчування
+u36,d04,2026-09-23,test,Category:фриланс|Category:харчування
+u36,d09,2026-09-22,test,Category:фриланс|Category:харчування
+u37,d03,2026-07-19,train,Category:харчування|Counterparty:тов «орендодавець»
+u37,d04,2026-07-22,train,Category:харчування|Counterparty:тов «орендодавець»
+u37,d01,2026-07-12,train,Category:харчування|Counterparty:тов «орендодавець»
+u37,d19,2026-10-13,test,Category:харчування|Counterparty:тов «орендодавець»
+u37,d05,2026-10-01,test,Category:харчування|Counterparty:тов «орендодавець»
+u38,d02,2026-04-04,train,Category:заробітна плата|Category:харчування
+u38,d01,2026-06-18,train,Category:заробітна плата|Category:харчування
+u38,d21,2026-05-14,train,Category:заробітна плата|Category:харчування
+u38,d18,2026-09-21,test,Category:заробітна плата|Category:харчування
+u38,d04,2026-08-22,test,Category:заробітна плата|Category:харчування
+u39,d12,2026-05-06,train,Counterparty:тов «орендодавець»|Category:оренда
+u39,d18,2026-05-04,train,Counterparty:тов «орендодавець»|Category:оренда
+u39,d03,2026-05-19,train,Counterparty:тов «орендодавець»|Category:оренда
+u39,d19,2026-10-11,test,Counterparty:тов «орендодавець»|Category:оренда
+u39,d13,2026-10-07,test,Counterparty:тов «орендодавець»|Category:оренда
+u40,d01,2026-05-02,train,Counterparty:тов «орендодавець»|Category:харчування
+u40,d05,2026-07-19,train,Counterparty:тов «орендодавець»|Category:харчування
+u40,d03,2026-06-09,train,Counterparty:тов «орендодавець»|Category:харчування
+u40,d19,2026-10-02,test,Counterparty:тов «орендодавець»|Category:харчування
+u40,d04,2026-09-14,test,Counterparty:тов «орендодавець»|Category:харчування
+u41,d07,2026-06-02,train,Category:транспорт|Category:комунальні послуги
+u41,d15,2026-07-04,train,Category:транспорт|Category:комунальні послуги
+u41,d18,2026-04-15,train,Category:транспорт|Category:комунальні послуги
+u41,d20,2026-10-12,test,Category:транспорт|Category:комунальні послуги
+u41,d04,2026-08-28,test,Category:транспорт|Category:комунальні послуги
+u42,d11,2026-06-09,train,Counterparty:тов «орендодавець»|Category:фриланс
+u42,d01,2026-07-12,train,Counterparty:тов «орендодавець»|Category:фриланс
+u42,d14,2026-07-08,train,Counterparty:тов «орендодавець»|Category:фриланс
+u42,d19,2026-10-13,test,Counterparty:тов «орендодавець»|Category:фриланс
+u42,d09,2026-09-20,test,Counterparty:тов «орендодавець»|Category:фриланс
+u43,d15,2026-05-24,train,Category:транспорт|Category:комунальні послуги
+u43,d18,2026-06-08,train,Category:транспорт|Category:комунальні послуги
+u43,d04,2026-05-25,train,Category:транспорт|Category:комунальні послуги
+u43,d07,2026-09-17,test,Category:транспорт|Category:комунальні послуги
+u43,d20,2026-08-09,test,Category:транспорт|Category:комунальні послуги
+u44,d04,2026-06-30,train,Counterparty:тов «роботодавець»|Category:харчування
+u44,d21,2026-04-20,train,Counterparty:тов «роботодавець»|Category:харчування
+u44,d02,2026-05-26,train,Counterparty:тов «роботодавець»|Category:харчування
+u44,d01,2026-08-23,test,Counterparty:тов «роботодавець»|Category:харчування
+u44,d05,2026-10-06,test,Counterparty:тов «роботодавець»|Category:харчування
+u45,d01,2026-05-31,train,Category:фриланс|Counterparty:тов «орендодавець»
+u45,d03,2026-07-06,train,Category:фриланс|Counterparty:тов «орендодавець»
+u45,d09,2026-06-11,train,Category:фриланс|Counterparty:тов «орендодавець»
+u45,d11,2026-10-12,test,Category:фриланс|Counterparty:тов «орендодавець»
+u45,d19,2026-10-20,test,Category:фриланс|Counterparty:тов «орендодавець»
+u46,d20,2026-04-15,train,Counterparty:ат «київські комунальні»|Category:харчування
+u46,d15,2026-07-21,train,Counterparty:ат «київські комунальні»|Category:харчування
+u46,d05,2026-05-18,train,Counterparty:ат «київські комунальні»|Category:харчування
+u46,d04,2026-09-13,test,Counterparty:ат «київські комунальні»|Category:харчування
+u47,d11,2026-07-28,train,Category:фриланс|Counterparty:тов «роботодавець»
+u47,d09,2026-06-12,train,Category:фриланс|Counterparty:тов «роботодавець»
+u47,d21,2026-06-22,train,Category:фриланс|Counterparty:тов «роботодавець»
+u47,d02,2026-10-02,test,Category:фриланс|Counterparty:тов «роботодавець»
+u47,d01,2026-09-27,test,Category:фриланс|Counterparty:тов «роботодавець»
+u48,d01,2026-06-14,train,Category:заробітна плата|Category:комунальні послуги
+u48,d21,2026-06-29,train,Category:заробітна плата|Category:комунальні послуги
+u48,d18,2026-05-29,train,Category:заробітна плата|Category:комунальні послуги
+u48,d02,2026-09-04,test,Category:заробітна плата|Category:комунальні послуги
+u48,d04,2026-09-09,test,Category:заробітна плата|Category:комунальні послуги
+u49,d11,2026-07-01,train,Category:фриланс|Category:транспорт
+u49,d18,2026-05-06,train,Category:фриланс|Category:транспорт
+u49,d14,2026-07-14,train,Category:фриланс|Category:транспорт
+u49,d07,2026-10-15,test,Category:фриланс|Category:транспорт
+u49,d09,2026-10-07,test,Category:фриланс|Category:транспорт
+u50,d15,2026-04-16,train,Category:фриланс|Category:комунальні послуги
+u50,d04,2026-06-10,train,Category:фриланс|Category:комунальні послуги
+u50,d14,2026-05-20,train,Category:фриланс|Category:комунальні послуги
+u50,d20,2026-08-17,test,Category:фриланс|Category:комунальні послуги
+u50,d09,2026-10-02,test,Category:фриланс|Category:комунальні послуги
+u51,d01,2026-06-20,train,Category:комунальні послуги|Category:заробітна плата
+u51,d20,2026-05-20,train,Category:комунальні послуги|Category:заробітна плата
+u51,d02,2026-04-10,train,Category:комунальні послуги|Category:заробітна плата
+u51,d21,2026-10-13,test,Category:комунальні послуги|Category:заробітна плата
+u51,d18,2026-10-20,test,Category:комунальні послуги|Category:заробітна плата
+u52,d21,2026-05-28,train,Category:заробітна плата|Category:оренда
+u52,d12,2026-06-25,train,Category:заробітна плата|Category:оренда
+u52,d01,2026-06-07,train,Category:заробітна плата|Category:оренда
+u52,d18,2026-10-15,test,Category:заробітна плата|Category:оренда
+u52,d03,2026-09-24,test,Category:заробітна плата|Category:оренда
+u53,d11,2026-07-10,train,Category:фриланс|Category:заробітна плата
+u53,d21,2026-04-10,train,Category:фриланс|Category:заробітна плата
+u53,d09,2026-05-03,train,Category:фриланс|Category:заробітна плата
+u53,d14,2026-08-01,test,Category:фриланс|Category:заробітна плата
+u53,d02,2026-09-22,test,Category:фриланс|Category:заробітна плата
+u54,d02,2026-04-10,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u54,d21,2026-06-27,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u54,d01,2026-05-29,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u54,d19,2026-10-09,test,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u54,d03,2026-10-20,test,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u55,d18,2026-04-22,train,Category:транспорт|Counterparty:ат «київські комунальні»
+u55,d20,2026-04-03,train,Category:транспорт|Counterparty:ат «київські комунальні»
+u55,d15,2026-06-25,train,Category:транспорт|Counterparty:ат «київські комунальні»
+u55,d04,2026-10-12,test,Category:транспорт|Counterparty:ат «київські комунальні»
+u55,d07,2026-09-06,test,Category:транспорт|Counterparty:ат «київські комунальні»
+u56,d01,2026-07-15,train,Counterparty:тов «орендодавець»|Category:комунальні послуги
+u56,d03,2026-04-06,train,Counterparty:тов «орендодавець»|Category:комунальні послуги
+u56,d20,2026-05-05,train,Counterparty:тов «орендодавець»|Category:комунальні послуги
+u56,d15,2026-09-11,test,Counterparty:тов «орендодавець»|Category:комунальні послуги
+u56,d19,2026-10-20,test,Counterparty:тов «орендодавець»|Category:комунальні послуги
+u57,d11,2026-06-05,train,Category:фриланс|Category:заробітна плата
+u57,d18,2026-04-24,train,Category:фриланс|Category:заробітна плата
+u57,d09,2026-06-26,train,Category:фриланс|Category:заробітна плата
+u57,d21,2026-09-25,test,Category:фриланс|Category:заробітна плата
+u57,d02,2026-10-02,test,Category:фриланс|Category:заробітна плата
+u58,d01,2026-07-27,train,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u58,d20,2026-05-21,train,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u58,d03,2026-05-07,train,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u58,d19,2026-10-13,test,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u58,d04,2026-10-10,test,Category:комунальні послуги|Counterparty:тов «орендодавець»
+u59,d21,2026-05-23,train,Category:заробітна плата|Counterparty:тов «орендодавець»
+u59,d18,2026-04-07,train,Category:заробітна плата|Counterparty:тов «орендодавець»
+u59,d02,2026-04-25,train,Category:заробітна плата|Counterparty:тов «орендодавець»
+u59,d19,2026-10-17,test,Category:заробітна плата|Counterparty:тов «орендодавець»
+u59,d03,2026-09-16,test,Category:заробітна плата|Counterparty:тов «орендодавець»
+u60,d03,2026-07-22,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u60,d02,2026-06-29,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u60,d21,2026-06-02,train,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u60,d01,2026-08-16,test,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»
+u60,d19,2026-10-01,test,Counterparty:тов «орендодавець»|Counterparty:тов «роботодавець»

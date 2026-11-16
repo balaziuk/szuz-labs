@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FinancialOperation",
+  "type": "object",
+  "required": ["id", "kind", "amount", "date", "currency"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^Op_[0-9]{5}$"},
+    "kind": {"type": "string", "enum": ["Income", "Expense", "Transfer"]},
+    "amount": {"type": "number", "exclusiveMinimum": 0},
+    "date": {"type": "string", "format": "date"},
+    "currency": {"type": "string", "enum": ["UAH", "USD"]},
+    "description": {"type": "string"}
+  },
+  "additionalProperties": false
+}

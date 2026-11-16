@@ -1,0 +1,262 @@
+{
+  "threshold": 0.4,
+  "clusters": {
+    "privat-talk": [
+      "privat-full",
+      "privat-short",
+      "privat-talk"
+    ],
+    "rent-case": [
+      "rent-full",
+      "rent-nom",
+      "rent-case"
+    ],
+    "silpo-talk": [
+      "silpo-full",
+      "silpo-short",
+      "silpo-talk"
+    ],
+    "kyiv-talk": [
+      "kyiv-full",
+      "kyiv-short",
+      "kyiv-talk"
+    ],
+    "util-talk": [
+      "util-full",
+      "util-short",
+      "util-talk"
+    ],
+    "fop-short": [
+      "fop-full",
+      "fop-case",
+      "fop-short"
+    ],
+    "emp-short": [
+      "emp-full",
+      "emp-short"
+    ],
+    "uklon-talk": [
+      "uklon-full",
+      "uklon-talk"
+    ],
+    "anc-short": [
+      "anc-full",
+      "anc-short"
+    ],
+    "prom-short": [
+      "prom-full",
+      "prom-short"
+    ],
+    "atb-short": [
+      "atb-full",
+      "atb-short"
+    ],
+    "studio-short": [
+      "studio-full",
+      "studio-short"
+    ]
+  },
+  "provenance": {
+    "privat-full": {
+      "name": "АТ КБ «ПриватБанк»",
+      "edrpou": "14360570"
+    },
+    "privat-short": {
+      "name": "ПриватБанк",
+      "edrpou": "14360570"
+    },
+    "privat-talk": {
+      "name": "Приват",
+      "edrpou": ""
+    },
+    "rent-full": {
+      "name": "ТОВ «Орендодавець»",
+      "edrpou": "12345678"
+    },
+    "rent-nom": {
+      "name": "Орендодавець",
+      "edrpou": ""
+    },
+    "rent-case": {
+      "name": "орендодавцю",
+      "edrpou": ""
+    },
+    "silpo-full": {
+      "name": "ТОВ «Сільпо-Фуд»",
+      "edrpou": "40720198"
+    },
+    "silpo-short": {
+      "name": "Сільпо-Фуд",
+      "edrpou": "40720198"
+    },
+    "silpo-talk": {
+      "name": "сільпо",
+      "edrpou": ""
+    },
+    "kyiv-full": {
+      "name": "ПрАТ «Київстар»",
+      "edrpou": "21673832"
+    },
+    "kyiv-short": {
+      "name": "Київстар",
+      "edrpou": ""
+    },
+    "kyiv-talk": {
+      "name": "київстар",
+      "edrpou": ""
+    },
+    "util-full": {
+      "name": "АТ «Київські комунальні»",
+      "edrpou": "33445566"
+    },
+    "util-short": {
+      "name": "Київські комунальні",
+      "edrpou": "33445566"
+    },
+    "util-talk": {
+      "name": "комунальні",
+      "edrpou": ""
+    },
+    "fop-full": {
+      "name": "ФОП Іваненко",
+      "edrpou": "99887766"
+    },
+    "fop-case": {
+      "name": "ФОПу Іваненку",
+      "edrpou": ""
+    },
+    "fop-short": {
+      "name": "Іваненко",
+      "edrpou": ""
+    },
+    "emp-full": {
+      "name": "ТОВ «Роботодавець»",
+      "edrpou": "87654321"
+    },
+    "emp-short": {
+      "name": "Роботодавець",
+      "edrpou": ""
+    },
+    "uklon-full": {
+      "name": "ТОВ «Уклон»",
+      "edrpou": "39932340"
+    },
+    "uklon-talk": {
+      "name": "уклон",
+      "edrpou": ""
+    },
+    "anc-full": {
+      "name": "ТОВ «Аптека АНЦ»",
+      "edrpou": "36151140"
+    },
+    "anc-short": {
+      "name": "Аптека АНЦ",
+      "edrpou": ""
+    },
+    "prom-full": {
+      "name": "ГО «Прометеус»",
+      "edrpou": "39185340"
+    },
+    "prom-short": {
+      "name": "Прометеус",
+      "edrpou": ""
+    },
+    "atb-full": {
+      "name": "ТОВ «АТБ-Маркет»",
+      "edrpou": "30487219"
+    },
+    "atb-short": {
+      "name": "АТБ-Маркет",
+      "edrpou": ""
+    },
+    "studio-full": {
+      "name": "ТОВ «Діджитал Студіо»",
+      "edrpou": "41122334"
+    },
+    "studio-short": {
+      "name": "Діджитал Студіо",
+      "edrpou": ""
+    }
+  },
+  "unmerge_demo": {
+    "at": "2026-11-03",
+    "restored_records": [
+      {
+        "id": "privat-full",
+        "name": "АТ КБ «ПриватБанк»",
+        "edrpou": "14360570"
+      },
+      {
+        "id": "privat-short",
+        "name": "ПриватБанк",
+        "edrpou": "14360570"
+      },
+      {
+        "id": "privat-talk",
+        "name": "Приват",
+        "edrpou": ""
+      }
+    ],
+    "clusters_after_unmerge": 14,
+    "clusters_before_unmerge": 12,
+    "reason": "перевірка, що злиття зворотне; робочі кластери не змінено"
+  },
+  "judge": {
+    "p003": {
+      "duplicate": true,
+      "confidence": 0.95,
+      "explanation": "Обидва записи містять прізвище «Іваненко», а відмінкова форма «ФОПу» в першому записі вказує на те, що це той самий суб'єкт, що й у другому, де вказано лише прізвище.",
+      "model": "qwen/qwen3.8-27b",
+      "score": 0.604,
+      "label": 1
+    },
+    "p004": {
+      "duplicate": true,
+      "confidence": 0.95,
+      "explanation": "Назви збігаються після нормалізації відмінків, а наявність ЄДРПОУ в одному записі та його відсутність у другому не суперечать ідентичності, оскільки код є унікальним ідентифікатором.",
+      "model": "qwen/qwen3.8-27b",
+      "score": 0.604,
+      "label": 1
+    },
+    "p010": {
+      "duplicate": true,
+      "confidence": 0.95,
+      "explanation": "Назва «Приват» є поширеним розмовним скороченням від «ПриватБанк», а відсутність коду ЄДРПОУ у другому записі не суперечить ідентичності, оскільки код у першому записі однозначно вказує на цю організацію.",
+      "model": "qwen/qwen3.8-27b",
+      "score": 0.658,
+      "label": 1
+    },
+    "p013": {
+      "duplicate": false,
+      "confidence": 0.95,
+      "explanation": "Назва в записі B є відмінковою формою слова, а не повною назвою юридичної особи, тому за відсутності ЄДРПОУ неможливо підтвердити ідентичність із конкретним ТОВ.",
+      "model": "qwen/qwen3.8-27b",
+      "score": 0.69,
+      "label": 1
+    },
+    "p015": {
+      "duplicate": true,
+      "confidence": 0.95,
+      "explanation": "Назви є граматичними відмінками одного й того ж слова, що вказує на ідентичність контрагента за відсутності інших розрізняючих ознак.",
+      "model": "qwen/qwen3.8-27b",
+      "score": 0.69,
+      "label": 1
+    },
+    "p024": {
+      "duplicate": false,
+      "confidence": 1.0,
+      "explanation": "Назви організацій суттєво відрізняються («Київстар» проти «Київські комунальні»), а також мають різні коди ЄДРПОУ, що однозначно свідчить про різні суб'єкти господарювання.",
+      "model": "qwen/qwen3.8-27b",
+      "score": 0.354,
+      "label": 0
+    },
+    "p025": {
+      "duplicate": false,
+      "confidence": 0.95,
+      "explanation": "«Київстар» — це телекомунікаційний оператор, тоді як «Київські комунальні» — це комунальне підприємство, тому це різні організації.",
+      "model": "qwen/qwen3.8-27b",
+      "score": 0.454,
+      "label": 0
+    }
+  }
+}

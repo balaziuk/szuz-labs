@@ -1,0 +1,4 @@
+mcp>=1.9,<2
+pydantic>=2.7
+rdflib>=7.0
+pyshacl>=0.26

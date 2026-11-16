@@ -1,0 +1,86 @@
+{
+  "version": "baseline-1",
+  "date": "2026-11-03",
+  "metrics": [
+    {
+      "name": "частка безготівкових витрат із контрагентом",
+      "dimension": "повнота",
+      "value": 0.9589,
+      "threshold": 0.95,
+      "passed": true,
+      "detail": "без ребра: 3"
+    },
+    {
+      "name": "deviation = actual − planned",
+      "dimension": "узгодженість",
+      "value": 1.0,
+      "threshold": 1.0,
+      "passed": true,
+      "detail": "бюджетів 7"
+    },
+    {
+      "name": "звіт дорівнює сумі своїх витрат",
+      "dimension": "узгодженість",
+      "value": 1.0,
+      "threshold": 1.0,
+      "passed": true,
+      "detail": "звітів 2"
+    },
+    {
+      "name": "експертна вибірка 30 записів",
+      "dimension": "точність",
+      "value": 1.0,
+      "threshold": 0.9,
+      "passed": true,
+      "detail": "картка accuracy_sample.csv"
+    },
+    {
+      "name": "дата є і не пізніше 2026-11-03",
+      "dimension": "актуальність",
+      "value": 1.0,
+      "threshold": 1.0,
+      "passed": true,
+      "detail": "дат у майбутньому: 0"
+    },
+    {
+      "name": "унікальність точної назви контрагента",
+      "dimension": "унікальність",
+      "value": 1.0,
+      "threshold": 1.0,
+      "passed": true,
+      "detail": "повторень назви: 0"
+    },
+    {
+      "name": "DERIVED_FROM у CSV-графі",
+      "dimension": "походження",
+      "value": 1.0,
+      "threshold": 0.95,
+      "passed": true,
+      "detail": "операцій 108"
+    },
+    {
+      "name": "prov:wasDerivedFrom у RDF",
+      "dimension": "походження",
+      "value": 0.0,
+      "threshold": 0.9,
+      "passed": false,
+      "detail": "операцій RDF 8"
+    },
+    {
+      "name": "рахунки, ЄДРПОУ, додатні суми",
+      "dimension": "валідність",
+      "value": 1.0,
+      "threshold": 1.0,
+      "passed": true,
+      "detail": "перевірок 122"
+    },
+    {
+      "name": "Turtle читається і SPARQL повертає звіти",
+      "dimension": "доступність",
+      "value": 1.0,
+      "threshold": 1.0,
+      "passed": true,
+      "detail": "data.ttl"
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+@prefix fin: <http://example.org/financial-operations#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fin:mention_d01_p0001 a prov:Entity ;
+    fin:confidence 0.99 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 66 ;
+    fin:offsetStart 55 ;
+    fin:refersTo fin:Acc_UA123456789 ;
+    fin:surface "UA123456789"@uk ;
+    prov:wasDerivedFrom fin:doc_d01 .
+
+fin:mention_d01_p0005 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 138 ;
+    fin:offsetStart 120 ;
+    fin:refersTo fin:Cp_Employer ;
+    fin:surface "ТОВ «Роботодавець»"@uk ;
+    prov:wasDerivedFrom fin:doc_d01 .
+
+fin:mention_d01_p0006 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 165 ;
+    fin:offsetStart 150 ;
+    fin:refersTo fin:Cat_Salary ;
+    fin:surface "Заробітна плата"@uk ;
+    prov:wasDerivedFrom fin:doc_d01 .
+
+fin:mention_d01_p0010 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 244 ;
+    fin:offsetStart 226 ;
+    fin:refersTo fin:Cp_Orendodavets ;
+    fin:surface "ТОВ «Орендодавець»"@uk ;
+    prov:wasDerivedFrom fin:doc_d01 .
+
+fin:mention_d01_p0011 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 262 ;
+    fin:offsetStart 256 ;
+    fin:refersTo fin:Cat_Rent ;
+    fin:surface "Оренда"@uk ;
+    prov:wasDerivedFrom fin:doc_d01 .
+
+fin:mention_d02_p0019 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 53 ;
+    fin:offsetStart 35 ;
+    fin:refersTo fin:Cp_Employer ;
+    fin:surface "ТОВ «Роботодавець»"@uk ;
+    prov:wasDerivedFrom fin:doc_d02 .
+
+fin:mention_d02_p0021 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 165 ;
+    fin:offsetStart 150 ;
+    fin:refersTo fin:Cat_Salary ;
+    fin:surface "Заробітна плата"@uk ;
+    prov:wasDerivedFrom fin:doc_d02 .
+
+fin:mention_d03_p0023 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 64 ;
+    fin:offsetStart 46 ;
+    fin:refersTo fin:Cp_Orendodavets ;
+    fin:surface "ТОВ «Орендодавець»"@uk ;
+    prov:wasDerivedFrom fin:doc_d03 .
+
+fin:mention_d03_p0025 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 109 ;
+    fin:offsetStart 103 ;
+    fin:refersTo fin:Cat_Rent ;
+    fin:surface "Оренда"@uk ;
+    prov:wasDerivedFrom fin:doc_d03 .
+
+fin:mention_d04_p0031 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 92 ;
+    fin:offsetStart 74 ;
+    fin:refersTo fin:Cat_Utilities ;
+    fin:surface "Комунальні послуги"@uk ;
+    prov:wasDerivedFrom fin:doc_d04 .
+
+fin:mention_d04_p0034 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 156 ;
+    fin:offsetStart 146 ;
+    fin:refersTo fin:Cat_Food ;
+    fin:surface "Харчування"@uk ;
+    prov:wasDerivedFrom fin:doc_d04 .
+
+fin:mention_d04_p0036 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 279 ;
+    fin:offsetStart 255 ;
+    fin:refersTo fin:Cp_Utility ;
+    fin:surface "АТ «Київські комунальні»"@uk ;
+    prov:wasDerivedFrom fin:doc_d04 .
+
+fin:mention_d05_p0038 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 45 ;
+    fin:offsetStart 29 ;
+    fin:refersTo fin:Cp_Silpo ;
+    fin:surface "ТОВ «Сільпо-Фуд»"@uk ;
+    prov:wasDerivedFrom fin:doc_d05 .
+
+fin:mention_d05_p0042 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 106 ;
+    fin:offsetStart 96 ;
+    fin:refersTo fin:Cat_Food ;
+    fin:surface "Харчування"@uk ;
+    prov:wasDerivedFrom fin:doc_d05 .
+
+fin:mention_d05_p0044 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 142 ;
+    fin:offsetStart 126 ;
+    fin:refersTo fin:Cp_ATB ;
+    fin:surface "ТОВ «АТБ-Маркет»"@uk ;
+    prov:wasDerivedFrom fin:doc_d05 .
+
+fin:mention_d05_p0048 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 202 ;
+    fin:offsetStart 192 ;
+    fin:refersTo fin:Cat_Food ;
+    fin:surface "Харчування"@uk ;
+    prov:wasDerivedFrom fin:doc_d05 .
+
+fin:mention_d06_p0056 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 47 ;
+    fin:offsetStart 32 ;
+    fin:refersTo fin:Cp_Kyivstar ;
+    fin:surface "ПрАТ «Київстар»"@uk ;
+    prov:wasDerivedFrom fin:doc_d06 .
+
+fin:mention_d06_p0060 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 116 ;
+    fin:offsetStart 97 ;
+    fin:refersTo fin:Cat_Telecom ;
+    fin:surface "Зв'язок та інтернет"@uk ;
+    prov:wasDerivedFrom fin:doc_d06 .
+
+fin:mention_d07_p0066 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 38 ;
+    fin:offsetStart 27 ;
+    fin:refersTo fin:Cp_Uklon ;
+    fin:surface "ТОВ «Уклон»"@uk ;
+    prov:wasDerivedFrom fin:doc_d07 .
+
+fin:mention_d07_p0070 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 97 ;
+    fin:offsetStart 88 ;
+    fin:refersTo fin:Cat_Transport ;
+    fin:surface "Транспорт"@uk ;
+    prov:wasDerivedFrom fin:doc_d07 .
+
+fin:mention_d08_p0076 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 36 ;
+    fin:offsetStart 20 ;
+    fin:refersTo fin:Cp_Apteka ;
+    fin:surface "ТОВ «Аптека АНЦ»"@uk ;
+    prov:wasDerivedFrom fin:doc_d08 .
+
+fin:mention_d08_p0080 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 94 ;
+    fin:offsetStart 86 ;
+    fin:refersTo fin:Cat_Health ;
+    fin:surface "Здоров'я"@uk ;
+    prov:wasDerivedFrom fin:doc_d08 .
+
+fin:mention_d09_p0086 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 34 ;
+    fin:offsetStart 22 ;
+    fin:refersTo fin:Cp_FreelanceClient ;
+    fin:surface "ФОП Іваненко"@uk ;
+    prov:wasDerivedFrom fin:doc_d09 .
+
+fin:mention_d09_p0090 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 94 ;
+    fin:offsetStart 87 ;
+    fin:refersTo fin:Cat_Freelance ;
+    fin:surface "Фриланс"@uk ;
+    prov:wasDerivedFrom fin:doc_d09 .
+
+fin:mention_d10_p0096 a prov:Entity ;
+    fin:confidence 0.99 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 35 ;
+    fin:offsetStart 24 ;
+    fin:refersTo fin:Acc_Savings_UA987654321 ;
+    fin:surface "UA987654321"@uk ;
+    prov:wasDerivedFrom fin:doc_d10 .
+
+fin:mention_d10_p0100 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 111 ;
+    fin:offsetStart 90 ;
+    fin:refersTo fin:Cat_Interest ;
+    fin:surface "Відсотки за депозитом"@uk ;
+    prov:wasDerivedFrom fin:doc_d10 .
+
+fin:mention_d10_p0104 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 198 ;
+    fin:offsetStart 176 ;
+    fin:refersTo fin:Cat_SavingsTransfer ;
+    fin:surface "Переказ на накопичення"@uk ;
+    prov:wasDerivedFrom fin:doc_d10 .
+
+fin:mention_d11_p0108 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 55 ;
+    fin:offsetStart 34 ;
+    fin:refersTo fin:Cp_DigitalStudio ;
+    fin:surface "ТОВ «Діджитал Студіо»"@uk ;
+    prov:wasDerivedFrom fin:doc_d11 .
+
+fin:mention_d11_p0110 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 128 ;
+    fin:offsetStart 121 ;
+    fin:refersTo fin:Cat_Freelance ;
+    fin:surface "Фриланс"@uk ;
+    prov:wasDerivedFrom fin:doc_d11 .
+
+fin:mention_d12_p0113 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 62 ;
+    fin:offsetStart 37 ;
+    fin:refersTo fin:Risk_RentConcentration ;
+    fin:surface "Ризик концентрації витрат"@uk ;
+    prov:wasDerivedFrom fin:doc_d12 .
+
+fin:mention_d12_p0114 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 90 ;
+    fin:offsetStart 84 ;
+    fin:refersTo fin:Cat_Rent ;
+    fin:surface "Оренда"@uk ;
+    prov:wasDerivedFrom fin:doc_d12 .
+
+fin:mention_d13_p0116 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 17 ;
+    fin:offsetStart 0 ;
+    fin:refersTo fin:Risk_LiquidityOct ;
+    fin:surface "Ризик ліквідності"@uk ;
+    prov:wasDerivedFrom fin:doc_d13 .
+
+fin:mention_d13_p0117 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 45 ;
+    fin:offsetStart 39 ;
+    fin:refersTo fin:Cat_Rent ;
+    fin:surface "Оренда"@uk ;
+    prov:wasDerivedFrom fin:doc_d13 .
+
+fin:mention_d14_p0121 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 14 ;
+    fin:offsetStart 0 ;
+    fin:refersTo fin:Risk_CurrencyFreelance ;
+    fin:surface "Валютний ризик"@uk ;
+    prov:wasDerivedFrom fin:doc_d14 .
+
+fin:mention_d14_p0122 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 43 ;
+    fin:offsetStart 36 ;
+    fin:refersTo fin:Cat_Freelance ;
+    fin:surface "Фриланс"@uk ;
+    prov:wasDerivedFrom fin:doc_d14 .
+
+fin:mention_d15_p0127 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 55 ;
+    fin:offsetStart 31 ;
+    fin:refersTo fin:Cp_Utility ;
+    fin:surface "АТ «Київські комунальні»"@uk ;
+    prov:wasDerivedFrom fin:doc_d15 .
+
+fin:mention_d15_p0131 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 124 ;
+    fin:offsetStart 106 ;
+    fin:refersTo fin:Cat_Utilities ;
+    fin:surface "Комунальні послуги"@uk ;
+    prov:wasDerivedFrom fin:doc_d15 .
+
+fin:mention_d16_p0137 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 56 ;
+    fin:offsetStart 42 ;
+    fin:refersTo fin:Cp_Prometheus ;
+    fin:surface "ГО «Прометеус»"@uk ;
+    prov:wasDerivedFrom fin:doc_d16 .
+
+fin:mention_d16_p0139 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 104 ;
+    fin:offsetStart 98 ;
+    fin:refersTo fin:Cat_Education ;
+    fin:surface "Освіта"@uk ;
+    prov:wasDerivedFrom fin:doc_d16 .
+
+fin:mention_d17_e0141 a prov:Entity ;
+    fin:confidence 0.7 ;
+    fin:model "human_alias_v1" ;
+    fin:offsetEnd 23 ;
+    fin:offsetStart 17 ;
+    fin:refersTo fin:Cp_PrivatBank ;
+    fin:surface "Приват"@uk ;
+    prov:wasDerivedFrom fin:doc_d17 .
+
+fin:mention_d17_p0143 a prov:Entity ;
+    fin:confidence 0.99 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 80 ;
+    fin:offsetStart 69 ;
+    fin:refersTo fin:Acc_UA123456789 ;
+    fin:surface "UA123456789"@uk ;
+    prov:wasDerivedFrom fin:doc_d17 .
+
+fin:mention_d17_p0145 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 140 ;
+    fin:offsetStart 122 ;
+    fin:refersTo fin:Cp_PrivatBank ;
+    fin:surface "АТ КБ «ПриватБанк»"@uk ;
+    prov:wasDerivedFrom fin:doc_d17 .
+
+fin:mention_d18_p0149 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 50 ;
+    fin:offsetStart 35 ;
+    fin:refersTo fin:Cat_Salary ;
+    fin:surface "Заробітна плата"@uk ;
+    prov:wasDerivedFrom fin:doc_d18 .
+
+fin:mention_d18_p0150 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 88 ;
+    fin:offsetStart 82 ;
+    fin:refersTo fin:Cat_Rent ;
+    fin:surface "Оренда"@uk ;
+    prov:wasDerivedFrom fin:doc_d18 .
+
+fin:mention_d18_p0153 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 143 ;
+    fin:offsetStart 134 ;
+    fin:refersTo fin:Cat_Transport ;
+    fin:surface "Транспорт"@uk ;
+    prov:wasDerivedFrom fin:doc_d18 .
+
+fin:mention_d19_p0155 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 20 ;
+    fin:offsetStart 0 ;
+    fin:refersTo fin:Risk_RentIncrease ;
+    fin:surface "Ризик зростання ціни"@uk ;
+    prov:wasDerivedFrom fin:doc_d19 .
+
+fin:mention_d19_p0156 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 48 ;
+    fin:offsetStart 42 ;
+    fin:refersTo fin:Cat_Rent ;
+    fin:surface "Оренда"@uk ;
+    prov:wasDerivedFrom fin:doc_d19 .
+
+fin:mention_d19_p0158 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 133 ;
+    fin:offsetStart 115 ;
+    fin:refersTo fin:Cp_Orendodavets ;
+    fin:surface "ТОВ «Орендодавець»"@uk ;
+    prov:wasDerivedFrom fin:doc_d19 .
+
+fin:mention_d20_p0161 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 14 ;
+    fin:offsetStart 0 ;
+    fin:refersTo fin:Risk_UtilitiesSeasonal ;
+    fin:surface "Сезонний ризик"@uk ;
+    prov:wasDerivedFrom fin:doc_d20 .
+
+fin:mention_d20_p0162 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 54 ;
+    fin:offsetStart 36 ;
+    fin:refersTo fin:Cat_Utilities ;
+    fin:surface "Комунальні послуги"@uk ;
+    prov:wasDerivedFrom fin:doc_d20 .
+
+fin:mention_d20_p0164 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 109 ;
+    fin:offsetStart 85 ;
+    fin:refersTo fin:Cp_Utility ;
+    fin:surface "АТ «Київські комунальні»"@uk ;
+    prov:wasDerivedFrom fin:doc_d20 .
+
+fin:mention_d21_p0169 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 23 ;
+    fin:offsetStart 0 ;
+    fin:refersTo fin:Risk_IncomeDependency ;
+    fin:surface "Ризик залежності доходу"@uk ;
+    prov:wasDerivedFrom fin:doc_d21 .
+
+fin:mention_d21_p0170 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 60 ;
+    fin:offsetStart 45 ;
+    fin:refersTo fin:Cat_Salary ;
+    fin:surface "Заробітна плата"@uk ;
+    prov:wasDerivedFrom fin:doc_d21 .
+
+fin:mention_d21_p0171 a prov:Entity ;
+    fin:confidence 0.95 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 91 ;
+    fin:offsetStart 73 ;
+    fin:refersTo fin:Cp_Employer ;
+    fin:surface "ТОВ «Роботодавець»"@uk ;
+    prov:wasDerivedFrom fin:doc_d21 .
+
+fin:mention_d22_e0179 a prov:Entity ;
+    fin:confidence 0.7 ;
+    fin:model "human_alias_v1" ;
+    fin:offsetEnd 66 ;
+    fin:offsetStart 55 ;
+    fin:refersTo fin:Cp_Orendodavets ;
+    fin:surface "орендодавцю"@uk ;
+    prov:wasDerivedFrom fin:doc_d22 .
+
+fin:mention_d22_e0183 a prov:Entity ;
+    fin:confidence 0.7 ;
+    fin:model "human_alias_v1" ;
+    fin:offsetEnd 106 ;
+    fin:offsetStart 97 ;
+    fin:refersTo fin:Cat_Utilities ;
+    fin:surface "Комуналка"@uk ;
+    prov:wasDerivedFrom fin:doc_d22 .
+
+fin:mention_d22_p0176 a prov:Entity ;
+    fin:confidence 0.99 ;
+    fin:model "regex+gazetteer" ;
+    fin:offsetEnd 45 ;
+    fin:offsetStart 34 ;
+    fin:refersTo fin:Acc_UA123456789 ;
+    fin:surface "UA123456789"@uk ;
+    prov:wasDerivedFrom fin:doc_d22 .
+
+fin:mention_d23_e0191 a prov:Entity ;
+    fin:confidence 0.7 ;
+    fin:model "human_alias_v1" ;
+    fin:offsetEnd 59 ;
+    fin:offsetStart 46 ;
+    fin:refersTo fin:Cp_FreelanceClient ;
+    fin:surface "ФОПу Іваненку"@uk ;
+    prov:wasDerivedFrom fin:doc_d23 .
+
+fin:mention_d23_e0195 a prov:Entity ;
+    fin:confidence 0.7 ;
+    fin:model "human_alias_v1" ;
+    fin:offsetEnd 105 ;
+    fin:offsetStart 99 ;
+    fin:refersTo fin:Cp_Silpo ;
+    fin:surface "сільпо"@uk ;
+    prov:wasDerivedFrom fin:doc_d23 .
+
+fin:mention_d23_e0196 a prov:Entity ;
+    fin:confidence 0.7 ;
+    fin:model "human_alias_v1" ;
+    fin:offsetEnd 120 ;
+    fin:offsetStart 117 ;
+    fin:refersTo fin:Cat_Food ;
+    fin:surface "їжа"@uk ;
+    prov:wasDerivedFrom fin:doc_d23 .
+
+fin:mention_d23_e0199 a prov:Entity ;
+    fin:confidence 0.7 ;
+    fin:model "human_alias_v1" ;
+    fin:offsetEnd 153 ;
+    fin:offsetStart 145 ;
+    fin:refersTo fin:Cp_Kyivstar ;
+    fin:surface "київстар"@uk ;
+    prov:wasDerivedFrom fin:doc_d23 .
+
+fin:mention_d23_e0200 a prov:Entity ;
+    fin:confidence 0.7 ;
+    fin:model "human_alias_v1" ;
+    fin:offsetEnd 172 ;
+    fin:offsetStart 165 ;
+    fin:refersTo fin:Cat_Telecom ;
+    fin:surface "зв'язок"@uk ;
+    prov:wasDerivedFrom fin:doc_d23 .
+
+fin:Acc_Savings_UA987654321 a fin:Account ;
+    fin:canonicalName "UA987654321"@uk .
+
+fin:Cat_Education a fin:Category ;
+    fin:canonicalName "Освіта"@uk .
+
+fin:Cat_Health a fin:Category ;
+    fin:canonicalName "Здоров'я"@uk .
+
+fin:Cat_Interest a fin:Category ;
+    fin:canonicalName "Відсотки за депозитом"@uk .
+
+fin:Cat_SavingsTransfer a fin:Category ;
+    fin:canonicalName "Переказ на накопичення"@uk .
+
+fin:Cp_ATB a fin:Counterparty ;
+    fin:canonicalName "ТОВ «АТБ-Маркет»"@uk .
+
+fin:Cp_Apteka a fin:Counterparty ;
+    fin:canonicalName "ТОВ «Аптека АНЦ»"@uk .
+
+fin:Cp_DigitalStudio a fin:Counterparty ;
+    fin:canonicalName "ТОВ «Діджитал Студіо»"@uk .
+
+fin:Cp_Prometheus a fin:Counterparty ;
+    fin:canonicalName "ГО «Прометеус»"@uk .
+
+fin:Cp_Uklon a fin:Counterparty ;
+    fin:canonicalName "ТОВ «Уклон»"@uk .
+
+fin:Risk_CurrencyFreelance a fin:Risk ;
+    fin:canonicalName "Валютний ризик"@uk .
+
+fin:Risk_IncomeDependency a fin:Risk ;
+    fin:canonicalName "Ризик залежності доходу"@uk .
+
+fin:Risk_LiquidityOct a fin:Risk ;
+    fin:canonicalName "Ризик ліквідності"@uk .
+
+fin:Risk_RentConcentration a fin:Risk ;
+    fin:canonicalName "Ризик концентрації витрат"@uk .
+
+fin:Risk_RentIncrease a fin:Risk ;
+    fin:canonicalName "Ризик зростання ціни"@uk .
+
+fin:Risk_UtilitiesSeasonal a fin:Risk ;
+    fin:canonicalName "Сезонний ризик"@uk .
+
+fin:Cat_Telecom a fin:Category ;
+    fin:canonicalName "Зв'язок та інтернет"@uk .
+
+fin:Cat_Transport a fin:Category ;
+    fin:canonicalName "Транспорт"@uk .
+
+fin:Cp_FreelanceClient a fin:Counterparty ;
+    fin:canonicalName "ФОП Іваненко"@uk .
+
+fin:Cp_Kyivstar a fin:Counterparty ;
+    fin:canonicalName "ПрАТ «Київстар»"@uk .
+
+fin:Cp_PrivatBank a fin:Counterparty ;
+    fin:canonicalName "АТ КБ «ПриватБанк»"@uk .
+
+fin:Cp_Silpo a fin:Counterparty ;
+    fin:canonicalName "ТОВ «Сільпо-Фуд»"@uk .
+
+fin:Acc_UA123456789 a fin:Account ;
+    fin:canonicalName "UA123456789"@uk .
+
+fin:Cat_Freelance a fin:Category ;
+    fin:canonicalName "Фриланс"@uk .
+
+fin:Cp_Employer a fin:Counterparty ;
+    fin:canonicalName "ТОВ «Роботодавець»"@uk .
+
+fin:Cp_Utility a fin:Counterparty ;
+    fin:canonicalName "АТ «Київські комунальні»"@uk .
+
+fin:Cat_Food a fin:Category ;
+    fin:canonicalName "Харчування"@uk .
+
+fin:Cat_Salary a fin:Category ;
+    fin:canonicalName "Заробітна плата"@uk .
+
+fin:Cat_Utilities a fin:Category ;
+    fin:canonicalName "Комунальні послуги"@uk .
+
+fin:Cp_Orendodavets a fin:Counterparty ;
+    fin:canonicalName "ТОВ «Орендодавець»"@uk .
+
+fin:Cat_Rent a fin:Category ;
+    fin:canonicalName "Оренда"@uk .
+

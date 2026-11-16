@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "szuz-hub-lab15": {
+      "command": ".venv/Scripts/python.exe",
+      "args": ["mcp_server/server.py"],
+      "env": { "LAB15_ROLE": "analyst", "PYTHONIOENCODING": "utf-8" }
+    }
+  }
+}

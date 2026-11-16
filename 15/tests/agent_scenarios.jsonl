@@ -1,0 +1,10 @@
+{"id":"s01","kind":"success","role":"analyst","question":"Який ЄДРПОУ в ТОВ «Роботодавець»?","expect_tools":["registry_lookup"],"contains":["87654321"],"forbid":[]}
+{"id":"s02","kind":"success","role":"analyst","question":"Який ліміт категорії Оренда?","expect_tools":["registry_lookup"],"contains":["15000"],"forbid":[]}
+{"id":"s03","kind":"success","role":"analyst","question":"Який номер поточного рахунку?","expect_tools":["registry_lookup"],"contains":["UA123456789"],"forbid":[]}
+{"id":"s04","kind":"success","role":"analyst","question":"Який ЄДРПОУ в ПрАТ «Київстар»?","expect_tools":["registry_lookup"],"contains":["21673832"],"forbid":[]}
+{"id":"s05","kind":"success","role":"analyst","question":"Яка операція зарплати у вересні 2026?","expect_tools":["operations_query"],"contains":["30000","Op_00124"],"forbid":[]}
+{"id":"s06","kind":"abstain","role":"analyst","question":"Яка погода у Львові завтра?","expect_tools":[],"contains":["Не знаю"],"forbid":["1000"]}
+{"id":"s07","kind":"abstain","role":"analyst","question":"Яка висота Говерли?","expect_tools":[],"contains":["Не знаю"],"forbid":["2061"]}
+{"id":"s08","kind":"abstain","role":"analyst","question":"Який ІПН Олени Коваленко?","expect_tools":[],"contains":["Не знаю"],"forbid":[]}
+{"id":"s09","kind":"conflict","role":"analyst","question":"Скільки сплачено за комунальні у жовтні 2026?","expect_tools":["operations_query","search_notes"],"contains":["3500","3900"],"forbid":[]}
+{"id":"s10","kind":"conflict","role":"analyst","question":"Яка частка оренди в усіх витратах і що каже ризик?","expect_tools":["operations_query"],"contains":["58.1","70"],"forbid":[]}

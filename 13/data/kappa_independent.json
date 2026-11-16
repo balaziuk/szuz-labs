@@ -1,0 +1,42 @@
+{
+  "n": 40,
+  "labels": [
+    "Account",
+    "Amount",
+    "Category",
+    "Counterparty",
+    "Currency",
+    "Edrpou",
+    "Period"
+  ],
+  "observed_agreement": 1.0,
+  "expected_agreement": 0.165,
+  "kappa": 1.0,
+  "disagreements": 0,
+  "confusion": {
+    "Account": {
+      "Account": 1
+    },
+    "Amount": {
+      "Amount": 6
+    },
+    "Category": {
+      "Category": 8
+    },
+    "Counterparty": {
+      "Counterparty": 8
+    },
+    "Currency": {
+      "Currency": 7
+    },
+    "Edrpou": {
+      "Edrpou": 5
+    },
+    "Period": {
+      "Period": 5
+    }
+  },
+  "source": "kappa_c.csv",
+  "annotator": "ШІ-асистент, окремий прохід без доступу до золотих міток",
+  "items": []
+}

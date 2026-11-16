@@ -1,0 +1,78 @@
+{
+  "n": 40,
+  "labels": [
+    "Account",
+    "Amount",
+    "Category",
+    "Counterparty",
+    "Currency",
+    "Date",
+    "Edrpou",
+    "O",
+    "Period"
+  ],
+  "observed_agreement": 0.875,
+  "expected_agreement": 0.1475,
+  "kappa": 0.8534,
+  "disagreements": 5,
+  "confusion": {
+    "Account": {
+      "Account": 1
+    },
+    "Amount": {
+      "Amount": 6
+    },
+    "Category": {
+      "Category": 8
+    },
+    "Counterparty": {
+      "Counterparty": 8
+    },
+    "Currency": {
+      "Currency": 5,
+      "O": 2
+    },
+    "Date": {},
+    "Edrpou": {
+      "Account": 1,
+      "Edrpou": 4
+    },
+    "O": {},
+    "Period": {
+      "Date": 2,
+      "Period": 3
+    }
+  },
+  "items": [
+    {
+      "id": "d01-e0002",
+      "text": "UAH",
+      "a": "Currency",
+      "b": "O"
+    },
+    {
+      "id": "d01-e0007",
+      "text": "2026-04",
+      "a": "Period",
+      "b": "Date"
+    },
+    {
+      "id": "d02-e0020",
+      "text": "87654321",
+      "a": "Edrpou",
+      "b": "Account"
+    },
+    {
+      "id": "d03-e0027",
+      "text": "грн",
+      "a": "Currency",
+      "b": "O"
+    },
+    {
+      "id": "d05-e0043",
+      "text": "2026-04",
+      "a": "Period",
+      "b": "Date"
+    }
+  ]
+}

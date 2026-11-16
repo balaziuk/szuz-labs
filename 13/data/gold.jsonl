@@ -1,0 +1,206 @@
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Account", "start": 55, "end": 66, "text": "UA123456789", "occ": 0, "id": "d01-e0001"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Currency", "start": 78, "end": 81, "text": "UAH", "occ": 0, "id": "d01-e0002"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Amount", "start": 103, "end": 111, "text": "30000.00", "occ": 0, "id": "d01-e0003"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Currency", "start": 112, "end": 115, "text": "грн", "occ": 0, "id": "d01-e0004"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 120, "end": 138, "text": "ТОВ «Роботодавець»", "occ": 0, "id": "d01-e0005"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Category", "start": 150, "end": 165, "text": "Заробітна плата", "occ": 0, "id": "d01-e0006"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Period", "start": 174, "end": 181, "text": "2026-04", "occ": 0, "id": "d01-e0007"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Amount", "start": 201, "end": 209, "text": "15000.00", "occ": 0, "id": "d01-e0008"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Currency", "start": 210, "end": 213, "text": "грн", "occ": 1, "id": "d01-e0009"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 226, "end": 244, "text": "ТОВ «Орендодавець»", "occ": 0, "id": "d01-e0010"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Category", "start": 256, "end": 262, "text": "Оренда", "occ": 0, "id": "d01-e0011"}
+{"doc_id": "d01", "split": "dev", "kind": "entity", "type": "Period", "start": 271, "end": 278, "text": "2026-04", "occ": 1, "id": "d01-e0012"}
+{"doc_id": "d01", "split": "dev", "kind": "relation", "type": "receivedFrom", "start": 83, "end": 182, "text": "1 квітня зараховано 30000.00 грн від ТОВ «Роботодавець», категорія Заробітна плата, період 2026-04.", "subject": "30000.00", "object": "ТОВ «Роботодавець»", "subject_start": 103, "object_start": 120, "id": "d01-r0013"}
+{"doc_id": "d01", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 83, "end": 182, "text": "1 квітня зараховано 30000.00 грн від ТОВ «Роботодавець», категорія Заробітна плата, період 2026-04.", "subject": "30000.00", "object": "Заробітна плата", "subject_start": 103, "object_start": 150, "id": "d01-r0014"}
+{"doc_id": "d01", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 83, "end": 182, "text": "1 квітня зараховано 30000.00 грн від ТОВ «Роботодавець», категорія Заробітна плата, період 2026-04.", "subject": "30000.00", "object": "2026-04", "subject_start": 103, "object_start": 174, "id": "d01-r0015"}
+{"doc_id": "d01", "split": "dev", "kind": "relation", "type": "paidTo", "start": 183, "end": 279, "text": "2 квітня сплачено 15000.00 грн контрагенту ТОВ «Орендодавець», категорія Оренда, період 2026-04.", "subject": "15000.00", "object": "ТОВ «Орендодавець»", "subject_start": 201, "object_start": 226, "id": "d01-r0016"}
+{"doc_id": "d01", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 183, "end": 279, "text": "2 квітня сплачено 15000.00 грн контрагенту ТОВ «Орендодавець», категорія Оренда, період 2026-04.", "subject": "15000.00", "object": "Оренда", "subject_start": 201, "object_start": 256, "id": "d01-r0017"}
+{"doc_id": "d01", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 183, "end": 279, "text": "2 квітня сплачено 15000.00 грн контрагенту ТОВ «Орендодавець», категорія Оренда, період 2026-04.", "subject": "15000.00", "object": "2026-04", "subject_start": 201, "object_start": 271, "id": "d01-r0018"}
+{"doc_id": "d02", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 35, "end": 53, "text": "ТОВ «Роботодавець»", "occ": 0, "id": "d02-e0019"}
+{"doc_id": "d02", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 69, "end": 77, "text": "87654321", "occ": 0, "id": "d02-e0020"}
+{"doc_id": "d02", "split": "dev", "kind": "entity", "type": "Category", "start": 150, "end": 165, "text": "Заробітна плата", "occ": 0, "id": "d02-e0021"}
+{"doc_id": "d02", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 35, "end": 91, "text": "ТОВ «Роботодавець» має код ЄДРПОУ 87654321 і тип клієнт.", "subject": "ТОВ «Роботодавець»", "object": "87654321", "subject_start": 35, "object_start": 69, "id": "d02-r0022"}
+{"doc_id": "d03", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 46, "end": 64, "text": "ТОВ «Орендодавець»", "occ": 0, "id": "d03-e0023"}
+{"doc_id": "d03", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 77, "end": 85, "text": "12345678", "occ": 0, "id": "d03-e0024"}
+{"doc_id": "d03", "split": "dev", "kind": "entity", "type": "Category", "start": 103, "end": 109, "text": "Оренда", "occ": 0, "id": "d03-e0025"}
+{"doc_id": "d03", "split": "dev", "kind": "entity", "type": "Amount", "start": 120, "end": 128, "text": "15000.00", "occ": 0, "id": "d03-e0026"}
+{"doc_id": "d03", "split": "dev", "kind": "entity", "type": "Currency", "start": 129, "end": 132, "text": "грн", "occ": 0, "id": "d03-e0027"}
+{"doc_id": "d03", "split": "dev", "kind": "entity", "type": "Period", "start": 143, "end": 150, "text": "2026-04", "occ": 0, "id": "d03-e0028"}
+{"doc_id": "d03", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 35, "end": 86, "text": "Контрагент ТОВ «Орендодавець», код ЄДРПОУ 12345678.", "subject": "ТОВ «Орендодавець»", "object": "12345678", "subject_start": 46, "object_start": 77, "id": "d03-r0029"}
+{"doc_id": "d03", "split": "dev", "kind": "relation", "type": "hasBudgetLimit", "start": 87, "end": 151, "text": "Ліміт категорії Оренда становить 15000.00 грн на період 2026-04.", "subject": "Оренда", "object": "15000.00", "subject_start": 103, "object_start": 120, "id": "d03-r0030"}
+{"doc_id": "d04", "split": "dev", "kind": "entity", "type": "Category", "start": 74, "end": 92, "text": "Комунальні послуги", "occ": 0, "id": "d04-e0031"}
+{"doc_id": "d04", "split": "dev", "kind": "entity", "type": "Amount", "start": 103, "end": 110, "text": "4000.00", "occ": 0, "id": "d04-e0032"}
+{"doc_id": "d04", "split": "dev", "kind": "entity", "type": "Currency", "start": 111, "end": 114, "text": "грн", "occ": 0, "id": "d04-e0033"}
+{"doc_id": "d04", "split": "dev", "kind": "entity", "type": "Category", "start": 146, "end": 156, "text": "Харчування", "occ": 0, "id": "d04-e0034"}
+{"doc_id": "d04", "split": "dev", "kind": "entity", "type": "Period", "start": 202, "end": 209, "text": "2026-04", "occ": 0, "id": "d04-e0035"}
+{"doc_id": "d04", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 255, "end": 279, "text": "АТ «Київські комунальні»", "occ": 0, "id": "d04-e0036"}
+{"doc_id": "d04", "split": "dev", "kind": "relation", "type": "hasBudgetLimit", "start": 58, "end": 115, "text": "Ліміт категорії Комунальні послуги становить 4000.00 грн.", "subject": "Комунальні послуги", "object": "4000.00", "subject_start": 74, "object_start": 103, "id": "d04-r0037"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 29, "end": 45, "text": "ТОВ «Сільпо-Фуд»", "occ": 0, "id": "d05-e0038"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 54, "end": 62, "text": "40720198", "occ": 0, "id": "d05-e0039"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Amount", "start": 73, "end": 80, "text": "1690.00", "occ": 0, "id": "d05-e0040"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Currency", "start": 81, "end": 84, "text": "грн", "occ": 0, "id": "d05-e0041"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Category", "start": 96, "end": 106, "text": "Харчування", "occ": 0, "id": "d05-e0042"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Period", "start": 115, "end": 122, "text": "2026-04", "occ": 0, "id": "d05-e0043"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 126, "end": 142, "text": "ТОВ «АТБ-Маркет»", "occ": 0, "id": "d05-e0044"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 151, "end": 159, "text": "30487219", "occ": 0, "id": "d05-e0045"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Amount", "start": 170, "end": 176, "text": "850.00", "occ": 0, "id": "d05-e0046"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Currency", "start": 177, "end": 180, "text": "грн", "occ": 1, "id": "d05-e0047"}
+{"doc_id": "d05", "split": "dev", "kind": "entity", "type": "Category", "start": 192, "end": 202, "text": "Харчування", "occ": 1, "id": "d05-e0048"}
+{"doc_id": "d05", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 27, "end": 123, "text": "У ТОВ «Сільпо-Фуд» (ЄДРПОУ 40720198) сплачено 1690.00 грн, категорія Харчування, період 2026-04.", "subject": "ТОВ «Сільпо-Фуд»", "object": "40720198", "subject_start": 29, "object_start": 54, "id": "d05-r0049"}
+{"doc_id": "d05", "split": "dev", "kind": "relation", "type": "paidTo", "start": 27, "end": 123, "text": "У ТОВ «Сільпо-Фуд» (ЄДРПОУ 40720198) сплачено 1690.00 грн, категорія Харчування, період 2026-04.", "subject": "1690.00", "object": "ТОВ «Сільпо-Фуд»", "subject_start": 73, "object_start": 29, "id": "d05-r0050"}
+{"doc_id": "d05", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 27, "end": 123, "text": "У ТОВ «Сільпо-Фуд» (ЄДРПОУ 40720198) сплачено 1690.00 грн, категорія Харчування, період 2026-04.", "subject": "1690.00", "object": "Харчування", "subject_start": 73, "object_start": 96, "id": "d05-r0051"}
+{"doc_id": "d05", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 27, "end": 123, "text": "У ТОВ «Сільпо-Фуд» (ЄДРПОУ 40720198) сплачено 1690.00 грн, категорія Харчування, період 2026-04.", "subject": "1690.00", "object": "2026-04", "subject_start": 73, "object_start": 115, "id": "d05-r0052"}
+{"doc_id": "d05", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 124, "end": 203, "text": "У ТОВ «АТБ-Маркет» (ЄДРПОУ 30487219) сплачено 850.00 грн, категорія Харчування.", "subject": "ТОВ «АТБ-Маркет»", "object": "30487219", "subject_start": 126, "object_start": 151, "id": "d05-r0053"}
+{"doc_id": "d05", "split": "dev", "kind": "relation", "type": "paidTo", "start": 124, "end": 203, "text": "У ТОВ «АТБ-Маркет» (ЄДРПОУ 30487219) сплачено 850.00 грн, категорія Харчування.", "subject": "850.00", "object": "ТОВ «АТБ-Маркет»", "subject_start": 170, "object_start": 126, "id": "d05-r0054"}
+{"doc_id": "d05", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 124, "end": 203, "text": "У ТОВ «АТБ-Маркет» (ЄДРПОУ 30487219) сплачено 850.00 грн, категорія Харчування.", "subject": "850.00", "object": "Харчування", "subject_start": 170, "object_start": 192, "id": "d05-r0055"}
+{"doc_id": "d06", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 32, "end": 47, "text": "ПрАТ «Київстар»", "occ": 0, "id": "d06-e0056"}
+{"doc_id": "d06", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 56, "end": 64, "text": "21673832", "occ": 0, "id": "d06-e0057"}
+{"doc_id": "d06", "split": "dev", "kind": "entity", "type": "Amount", "start": 75, "end": 81, "text": "250.00", "occ": 0, "id": "d06-e0058"}
+{"doc_id": "d06", "split": "dev", "kind": "entity", "type": "Currency", "start": 82, "end": 85, "text": "грн", "occ": 0, "id": "d06-e0059"}
+{"doc_id": "d06", "split": "dev", "kind": "entity", "type": "Category", "start": 97, "end": 116, "text": "Зв'язок та інтернет", "occ": 0, "id": "d06-e0060"}
+{"doc_id": "d06", "split": "dev", "kind": "entity", "type": "Period", "start": 125, "end": 132, "text": "2026-04", "occ": 0, "id": "d06-e0061"}
+{"doc_id": "d06", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 20, "end": 133, "text": "Контрагенту ПрАТ «Київстар» (ЄДРПОУ 21673832) сплачено 250.00 грн, категорія Зв'язок та інтернет, період 2026-04.", "subject": "ПрАТ «Київстар»", "object": "21673832", "subject_start": 32, "object_start": 56, "id": "d06-r0062"}
+{"doc_id": "d06", "split": "dev", "kind": "relation", "type": "paidTo", "start": 20, "end": 133, "text": "Контрагенту ПрАТ «Київстар» (ЄДРПОУ 21673832) сплачено 250.00 грн, категорія Зв'язок та інтернет, період 2026-04.", "subject": "250.00", "object": "ПрАТ «Київстар»", "subject_start": 75, "object_start": 32, "id": "d06-r0063"}
+{"doc_id": "d06", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 20, "end": 133, "text": "Контрагенту ПрАТ «Київстар» (ЄДРПОУ 21673832) сплачено 250.00 грн, категорія Зв'язок та інтернет, період 2026-04.", "subject": "250.00", "object": "Зв'язок та інтернет", "subject_start": 75, "object_start": 97, "id": "d06-r0064"}
+{"doc_id": "d06", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 20, "end": 133, "text": "Контрагенту ПрАТ «Київстар» (ЄДРПОУ 21673832) сплачено 250.00 грн, категорія Зв'язок та інтернет, період 2026-04.", "subject": "250.00", "object": "2026-04", "subject_start": 75, "object_start": 125, "id": "d06-r0065"}
+{"doc_id": "d07", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 27, "end": 38, "text": "ТОВ «Уклон»", "occ": 0, "id": "d07-e0066"}
+{"doc_id": "d07", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 47, "end": 55, "text": "39932340", "occ": 0, "id": "d07-e0067"}
+{"doc_id": "d07", "split": "dev", "kind": "entity", "type": "Amount", "start": 66, "end": 72, "text": "145.00", "occ": 0, "id": "d07-e0068"}
+{"doc_id": "d07", "split": "dev", "kind": "entity", "type": "Currency", "start": 73, "end": 76, "text": "грн", "occ": 0, "id": "d07-e0069"}
+{"doc_id": "d07", "split": "dev", "kind": "entity", "type": "Category", "start": 88, "end": 97, "text": "Транспорт", "occ": 0, "id": "d07-e0070"}
+{"doc_id": "d07", "split": "dev", "kind": "entity", "type": "Period", "start": 106, "end": 113, "text": "2026-04", "occ": 0, "id": "d07-e0071"}
+{"doc_id": "d07", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 15, "end": 114, "text": "Контрагенту ТОВ «Уклон» (ЄДРПОУ 39932340) сплачено 145.00 грн, категорія Транспорт, період 2026-04.", "subject": "ТОВ «Уклон»", "object": "39932340", "subject_start": 27, "object_start": 47, "id": "d07-r0072"}
+{"doc_id": "d07", "split": "dev", "kind": "relation", "type": "paidTo", "start": 15, "end": 114, "text": "Контрагенту ТОВ «Уклон» (ЄДРПОУ 39932340) сплачено 145.00 грн, категорія Транспорт, період 2026-04.", "subject": "145.00", "object": "ТОВ «Уклон»", "subject_start": 66, "object_start": 27, "id": "d07-r0073"}
+{"doc_id": "d07", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 15, "end": 114, "text": "Контрагенту ТОВ «Уклон» (ЄДРПОУ 39932340) сплачено 145.00 грн, категорія Транспорт, період 2026-04.", "subject": "145.00", "object": "Транспорт", "subject_start": 66, "object_start": 88, "id": "d07-r0074"}
+{"doc_id": "d07", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 15, "end": 114, "text": "Контрагенту ТОВ «Уклон» (ЄДРПОУ 39932340) сплачено 145.00 грн, категорія Транспорт, період 2026-04.", "subject": "145.00", "object": "2026-04", "subject_start": 66, "object_start": 106, "id": "d07-r0075"}
+{"doc_id": "d08", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 20, "end": 36, "text": "ТОВ «Аптека АНЦ»", "occ": 0, "id": "d08-e0076"}
+{"doc_id": "d08", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 45, "end": 53, "text": "36151140", "occ": 0, "id": "d08-e0077"}
+{"doc_id": "d08", "split": "dev", "kind": "entity", "type": "Amount", "start": 64, "end": 70, "text": "320.00", "occ": 0, "id": "d08-e0078"}
+{"doc_id": "d08", "split": "dev", "kind": "entity", "type": "Currency", "start": 71, "end": 74, "text": "грн", "occ": 0, "id": "d08-e0079"}
+{"doc_id": "d08", "split": "dev", "kind": "entity", "type": "Category", "start": 86, "end": 94, "text": "Здоров'я", "occ": 0, "id": "d08-e0080"}
+{"doc_id": "d08", "split": "dev", "kind": "entity", "type": "Period", "start": 103, "end": 110, "text": "2026-04", "occ": 0, "id": "d08-e0081"}
+{"doc_id": "d08", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 8, "end": 111, "text": "Контрагенту ТОВ «Аптека АНЦ» (ЄДРПОУ 36151140) сплачено 320.00 грн, категорія Здоров'я, період 2026-04.", "subject": "ТОВ «Аптека АНЦ»", "object": "36151140", "subject_start": 20, "object_start": 45, "id": "d08-r0082"}
+{"doc_id": "d08", "split": "dev", "kind": "relation", "type": "paidTo", "start": 8, "end": 111, "text": "Контрагенту ТОВ «Аптека АНЦ» (ЄДРПОУ 36151140) сплачено 320.00 грн, категорія Здоров'я, період 2026-04.", "subject": "320.00", "object": "ТОВ «Аптека АНЦ»", "subject_start": 64, "object_start": 20, "id": "d08-r0083"}
+{"doc_id": "d08", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 8, "end": 111, "text": "Контрагенту ТОВ «Аптека АНЦ» (ЄДРПОУ 36151140) сплачено 320.00 грн, категорія Здоров'я, період 2026-04.", "subject": "320.00", "object": "Здоров'я", "subject_start": 64, "object_start": 86, "id": "d08-r0084"}
+{"doc_id": "d08", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 8, "end": 111, "text": "Контрагенту ТОВ «Аптека АНЦ» (ЄДРПОУ 36151140) сплачено 320.00 грн, категорія Здоров'я, період 2026-04.", "subject": "320.00", "object": "2026-04", "subject_start": 64, "object_start": 103, "id": "d08-r0085"}
+{"doc_id": "d09", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 22, "end": 34, "text": "ФОП Іваненко", "occ": 0, "id": "d09-e0086"}
+{"doc_id": "d09", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 43, "end": 51, "text": "99887766", "occ": 0, "id": "d09-e0087"}
+{"doc_id": "d09", "split": "dev", "kind": "entity", "type": "Amount", "start": 64, "end": 71, "text": "8000.00", "occ": 0, "id": "d09-e0088"}
+{"doc_id": "d09", "split": "dev", "kind": "entity", "type": "Currency", "start": 72, "end": 75, "text": "USD", "occ": 0, "id": "d09-e0089"}
+{"doc_id": "d09", "split": "dev", "kind": "entity", "type": "Category", "start": 87, "end": 94, "text": "Фриланс", "occ": 0, "id": "d09-e0090"}
+{"doc_id": "d09", "split": "dev", "kind": "entity", "type": "Period", "start": 103, "end": 110, "text": "2026-04", "occ": 0, "id": "d09-e0091"}
+{"doc_id": "d09", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 18, "end": 111, "text": "Від ФОП Іваненко (ЄДРПОУ 99887766) зараховано 8000.00 USD, категорія Фриланс, період 2026-04.", "subject": "ФОП Іваненко", "object": "99887766", "subject_start": 22, "object_start": 43, "id": "d09-r0092"}
+{"doc_id": "d09", "split": "dev", "kind": "relation", "type": "receivedFrom", "start": 18, "end": 111, "text": "Від ФОП Іваненко (ЄДРПОУ 99887766) зараховано 8000.00 USD, категорія Фриланс, період 2026-04.", "subject": "8000.00", "object": "ФОП Іваненко", "subject_start": 64, "object_start": 22, "id": "d09-r0093"}
+{"doc_id": "d09", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 18, "end": 111, "text": "Від ФОП Іваненко (ЄДРПОУ 99887766) зараховано 8000.00 USD, категорія Фриланс, період 2026-04.", "subject": "8000.00", "object": "Фриланс", "subject_start": 64, "object_start": 87, "id": "d09-r0094"}
+{"doc_id": "d09", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 18, "end": 111, "text": "Від ФОП Іваненко (ЄДРПОУ 99887766) зараховано 8000.00 USD, категорія Фриланс, період 2026-04.", "subject": "8000.00", "object": "2026-04", "subject_start": 64, "object_start": 103, "id": "d09-r0095"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Account", "start": 24, "end": 35, "text": "UA987654321", "occ": 0, "id": "d10-e0096"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Currency", "start": 44, "end": 47, "text": "UAH", "occ": 0, "id": "d10-e0097"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Amount", "start": 69, "end": 74, "text": "42.50", "occ": 0, "id": "d10-e0098"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Currency", "start": 75, "end": 78, "text": "грн", "occ": 0, "id": "d10-e0099"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Category", "start": 90, "end": 111, "text": "Відсотки за депозитом", "occ": 0, "id": "d10-e0100"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Period", "start": 120, "end": 127, "text": "2026-04", "occ": 0, "id": "d10-e0101"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Amount", "start": 153, "end": 160, "text": "3000.00", "occ": 0, "id": "d10-e0102"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Currency", "start": 161, "end": 164, "text": "грн", "occ": 1, "id": "d10-e0103"}
+{"doc_id": "d10", "split": "dev", "kind": "entity", "type": "Category", "start": 176, "end": 198, "text": "Переказ на накопичення", "occ": 0, "id": "d10-e0104"}
+{"doc_id": "d10", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 49, "end": 128, "text": "Зараховано відсотки 42.50 грн, категорія Відсотки за депозитом, період 2026-04.", "subject": "42.50", "object": "Відсотки за депозитом", "subject_start": 69, "object_start": 90, "id": "d10-r0105"}
+{"doc_id": "d10", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 49, "end": 128, "text": "Зараховано відсотки 42.50 грн, категорія Відсотки за депозитом, період 2026-04.", "subject": "42.50", "object": "2026-04", "subject_start": 69, "object_start": 120, "id": "d10-r0106"}
+{"doc_id": "d10", "split": "dev", "kind": "relation", "type": "hasCategory", "start": 129, "end": 199, "text": "Окремо виконано переказ 3000.00 грн, категорія Переказ на накопичення.", "subject": "3000.00", "object": "Переказ на накопичення", "subject_start": 153, "object_start": 176, "id": "d10-r0107"}
+{"doc_id": "d11", "split": "dev", "kind": "entity", "type": "Counterparty", "start": 34, "end": 55, "text": "ТОВ «Діджитал Студіо»", "occ": 0, "id": "d11-e0108"}
+{"doc_id": "d11", "split": "dev", "kind": "entity", "type": "Edrpou", "start": 71, "end": 79, "text": "41122334", "occ": 0, "id": "d11-e0109"}
+{"doc_id": "d11", "split": "dev", "kind": "entity", "type": "Category", "start": 121, "end": 128, "text": "Фриланс", "occ": 0, "id": "d11-e0110"}
+{"doc_id": "d11", "split": "dev", "kind": "relation", "type": "identifiedBy", "start": 23, "end": 80, "text": "Контрагент ТОВ «Діджитал Студіо» має код ЄДРПОУ 41122334.", "subject": "ТОВ «Діджитал Студіо»", "object": "41122334", "subject_start": 34, "object_start": 71, "id": "d11-r0111"}
+{"doc_id": "d12", "split": "dev", "kind": "entity", "type": "Period", "start": 28, "end": 35, "text": "2026-04", "occ": 0, "id": "d12-e0112"}
+{"doc_id": "d12", "split": "dev", "kind": "entity", "type": "Risk", "start": 37, "end": 62, "text": "Ризик концентрації витрат", "occ": 0, "id": "d12-e0113"}
+{"doc_id": "d12", "split": "dev", "kind": "entity", "type": "Category", "start": 84, "end": 90, "text": "Оренда", "occ": 0, "id": "d12-e0114"}
+{"doc_id": "d12", "split": "dev", "kind": "relation", "type": "concerns", "start": 37, "end": 91, "text": "Ризик концентрації витрат стосується категорії Оренда.", "subject": "Ризик концентрації витрат", "object": "Оренда", "subject_start": 37, "object_start": 84, "id": "d12-r0115"}
+{"doc_id": "d13", "split": "dev", "kind": "entity", "type": "Risk", "start": 0, "end": 17, "text": "Ризик ліквідності", "occ": 0, "id": "d13-e0116"}
+{"doc_id": "d13", "split": "dev", "kind": "entity", "type": "Category", "start": 39, "end": 45, "text": "Оренда", "occ": 0, "id": "d13-e0117"}
+{"doc_id": "d13", "split": "dev", "kind": "entity", "type": "Period", "start": 56, "end": 63, "text": "2026-10", "occ": 0, "id": "d13-e0118"}
+{"doc_id": "d13", "split": "dev", "kind": "relation", "type": "concerns", "start": 0, "end": 64, "text": "Ризик ліквідності стосується категорії Оренда у періоді 2026-10.", "subject": "Ризик ліквідності", "object": "Оренда", "subject_start": 0, "object_start": 39, "id": "d13-r0119"}
+{"doc_id": "d13", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 0, "end": 64, "text": "Ризик ліквідності стосується категорії Оренда у періоді 2026-10.", "subject": "Ризик ліквідності", "object": "2026-10", "subject_start": 0, "object_start": 56, "id": "d13-r0120"}
+{"doc_id": "d14", "split": "dev", "kind": "entity", "type": "Risk", "start": 0, "end": 14, "text": "Валютний ризик", "occ": 0, "id": "d14-e0121"}
+{"doc_id": "d14", "split": "dev", "kind": "entity", "type": "Category", "start": 36, "end": 43, "text": "Фриланс", "occ": 0, "id": "d14-e0122"}
+{"doc_id": "d14", "split": "dev", "kind": "entity", "type": "Period", "start": 54, "end": 61, "text": "2026-04", "occ": 0, "id": "d14-e0123"}
+{"doc_id": "d14", "split": "dev", "kind": "entity", "type": "Currency", "start": 93, "end": 96, "text": "USD", "occ": 0, "id": "d14-e0124"}
+{"doc_id": "d14", "split": "dev", "kind": "relation", "type": "concerns", "start": 0, "end": 62, "text": "Валютний ризик стосується категорії Фриланс у періоді 2026-04.", "subject": "Валютний ризик", "object": "Фриланс", "subject_start": 0, "object_start": 36, "id": "d14-r0125"}
+{"doc_id": "d14", "split": "dev", "kind": "relation", "type": "inPeriod", "start": 0, "end": 62, "text": "Валютний ризик стосується категорії Фриланс у періоді 2026-04.", "subject": "Валютний ризик", "object": "2026-04", "subject_start": 0, "object_start": 54, "id": "d14-r0126"}
+{"doc_id": "d15", "split": "test", "kind": "entity", "type": "Counterparty", "start": 31, "end": 55, "text": "АТ «Київські комунальні»", "occ": 0, "id": "d15-e0127"}
+{"doc_id": "d15", "split": "test", "kind": "entity", "type": "Edrpou", "start": 64, "end": 72, "text": "33445566", "occ": 0, "id": "d15-e0128"}
+{"doc_id": "d15", "split": "test", "kind": "entity", "type": "Amount", "start": 83, "end": 90, "text": "4200.00", "occ": 0, "id": "d15-e0129"}
+{"doc_id": "d15", "split": "test", "kind": "entity", "type": "Currency", "start": 91, "end": 94, "text": "грн", "occ": 0, "id": "d15-e0130"}
+{"doc_id": "d15", "split": "test", "kind": "entity", "type": "Category", "start": 106, "end": 124, "text": "Комунальні послуги", "occ": 0, "id": "d15-e0131"}
+{"doc_id": "d15", "split": "test", "kind": "entity", "type": "Period", "start": 133, "end": 140, "text": "2026-04", "occ": 0, "id": "d15-e0132"}
+{"doc_id": "d15", "split": "test", "kind": "relation", "type": "identifiedBy", "start": 19, "end": 141, "text": "Контрагенту АТ «Київські комунальні» (ЄДРПОУ 33445566) сплачено 4200.00 грн, категорія Комунальні послуги, період 2026-04.", "subject": "АТ «Київські комунальні»", "object": "33445566", "subject_start": 31, "object_start": 64, "id": "d15-r0133"}
+{"doc_id": "d15", "split": "test", "kind": "relation", "type": "paidTo", "start": 19, "end": 141, "text": "Контрагенту АТ «Київські комунальні» (ЄДРПОУ 33445566) сплачено 4200.00 грн, категорія Комунальні послуги, період 2026-04.", "subject": "4200.00", "object": "АТ «Київські комунальні»", "subject_start": 83, "object_start": 31, "id": "d15-r0134"}
+{"doc_id": "d15", "split": "test", "kind": "relation", "type": "hasCategory", "start": 19, "end": 141, "text": "Контрагенту АТ «Київські комунальні» (ЄДРПОУ 33445566) сплачено 4200.00 грн, категорія Комунальні послуги, період 2026-04.", "subject": "4200.00", "object": "Комунальні послуги", "subject_start": 83, "object_start": 106, "id": "d15-r0135"}
+{"doc_id": "d15", "split": "test", "kind": "relation", "type": "inPeriod", "start": 19, "end": 141, "text": "Контрагенту АТ «Київські комунальні» (ЄДРПОУ 33445566) сплачено 4200.00 грн, категорія Комунальні послуги, період 2026-04.", "subject": "4200.00", "object": "2026-04", "subject_start": 83, "object_start": 133, "id": "d15-r0136"}
+{"doc_id": "d16", "split": "test", "kind": "entity", "type": "Counterparty", "start": 42, "end": 56, "text": "ГО «Прометеус»", "occ": 0, "id": "d16-e0137"}
+{"doc_id": "d16", "split": "test", "kind": "entity", "type": "Edrpou", "start": 65, "end": 73, "text": "39185340", "occ": 0, "id": "d16-e0138"}
+{"doc_id": "d16", "split": "test", "kind": "entity", "type": "Category", "start": 98, "end": 104, "text": "Освіта", "occ": 0, "id": "d16-e0139"}
+{"doc_id": "d16", "split": "test", "kind": "relation", "type": "identifiedBy", "start": 31, "end": 105, "text": "Витрати на ГО «Прометеус» (ЄДРПОУ 39185340) відносять до категорії Освіта.", "subject": "ГО «Прометеус»", "object": "39185340", "subject_start": 42, "object_start": 65, "id": "d16-r0140"}
+{"doc_id": "d17", "split": "test", "kind": "entity", "type": "Counterparty", "start": 17, "end": 23, "text": "Приват", "occ": 0, "id": "d17-e0141"}
+{"doc_id": "d17", "split": "test", "kind": "entity", "type": "Amount", "start": 33, "end": 38, "text": "15.00", "occ": 0, "id": "d17-e0142"}
+{"doc_id": "d17", "split": "test", "kind": "entity", "type": "Currency", "start": 39, "end": 42, "text": "грн", "occ": 0, "id": "d17-e0143"}
+{"doc_id": "d17", "split": "test", "kind": "entity", "type": "Account", "start": 69, "end": 80, "text": "UA123456789", "occ": 0, "id": "d17-e0144"}
+{"doc_id": "d17", "split": "test", "kind": "entity", "type": "Period", "start": 89, "end": 96, "text": "2026-04", "occ": 0, "id": "d17-e0145"}
+{"doc_id": "d17", "split": "test", "kind": "entity", "type": "Counterparty", "start": 122, "end": 140, "text": "АТ КБ «ПриватБанк»", "occ": 0, "id": "d17-e0146"}
+{"doc_id": "d17", "split": "test", "kind": "entity", "type": "Edrpou", "start": 153, "end": 161, "text": "14360570", "occ": 0, "id": "d17-e0147"}
+{"doc_id": "d17", "split": "test", "kind": "relation", "type": "paidTo", "start": 15, "end": 97, "text": "У Приват сплачено 15.00 грн за обслуговування рахунку UA123456789, період 2026-04.", "subject": "15.00", "object": "Приват", "subject_start": 33, "object_start": 17, "id": "d17-r0148"}
+{"doc_id": "d17", "split": "test", "kind": "relation", "type": "inPeriod", "start": 15, "end": 97, "text": "У Приват сплачено 15.00 грн за обслуговування рахунку UA123456789, період 2026-04.", "subject": "15.00", "object": "2026-04", "subject_start": 33, "object_start": 89, "id": "d17-r0149"}
+{"doc_id": "d17", "split": "test", "kind": "relation", "type": "identifiedBy", "start": 98, "end": 162, "text": "Повна назва в реєстрі — АТ КБ «ПриватБанк», код ЄДРПОУ 14360570.", "subject": "АТ КБ «ПриватБанк»", "object": "14360570", "subject_start": 122, "object_start": 153, "id": "d17-r0150"}
+{"doc_id": "d18", "split": "test", "kind": "entity", "type": "Category", "start": 35, "end": 50, "text": "Заробітна плата", "occ": 0, "id": "d18-e0151"}
+{"doc_id": "d18", "split": "test", "kind": "entity", "type": "Category", "start": 82, "end": 88, "text": "Оренда", "occ": 0, "id": "d18-e0152"}
+{"doc_id": "d18", "split": "test", "kind": "entity", "type": "Amount", "start": 110, "end": 118, "text": "15000.00", "occ": 0, "id": "d18-e0153"}
+{"doc_id": "d18", "split": "test", "kind": "entity", "type": "Currency", "start": 119, "end": 122, "text": "грн", "occ": 0, "id": "d18-e0154"}
+{"doc_id": "d18", "split": "test", "kind": "entity", "type": "Category", "start": 134, "end": 143, "text": "Транспорт", "occ": 0, "id": "d18-e0155"}
+{"doc_id": "d18", "split": "test", "kind": "relation", "type": "hasBudgetLimit", "start": 72, "end": 123, "text": "Категорія Оренда є витратою з лімітом 15000.00 грн.", "subject": "Оренда", "object": "15000.00", "subject_start": 82, "object_start": 110, "id": "d18-r0156"}
+{"doc_id": "d19", "split": "test", "kind": "entity", "type": "Risk", "start": 0, "end": 20, "text": "Ризик зростання ціни", "occ": 0, "id": "d19-e0157"}
+{"doc_id": "d19", "split": "test", "kind": "entity", "type": "Category", "start": 42, "end": 48, "text": "Оренда", "occ": 0, "id": "d19-e0158"}
+{"doc_id": "d19", "split": "test", "kind": "entity", "type": "Period", "start": 59, "end": 66, "text": "2026-10", "occ": 0, "id": "d19-e0159"}
+{"doc_id": "d19", "split": "test", "kind": "entity", "type": "Counterparty", "start": 115, "end": 133, "text": "ТОВ «Орендодавець»", "occ": 0, "id": "d19-e0160"}
+{"doc_id": "d19", "split": "test", "kind": "relation", "type": "concerns", "start": 0, "end": 67, "text": "Ризик зростання ціни стосується категорії Оренда у періоді 2026-10.", "subject": "Ризик зростання ціни", "object": "Оренда", "subject_start": 0, "object_start": 42, "id": "d19-r0161"}
+{"doc_id": "d19", "split": "test", "kind": "relation", "type": "inPeriod", "start": 0, "end": 67, "text": "Ризик зростання ціни стосується категорії Оренда у періоді 2026-10.", "subject": "Ризик зростання ціни", "object": "2026-10", "subject_start": 0, "object_start": 59, "id": "d19-r0162"}
+{"doc_id": "d20", "split": "test", "kind": "entity", "type": "Risk", "start": 0, "end": 14, "text": "Сезонний ризик", "occ": 0, "id": "d20-e0163"}
+{"doc_id": "d20", "split": "test", "kind": "entity", "type": "Category", "start": 36, "end": 54, "text": "Комунальні послуги", "occ": 0, "id": "d20-e0164"}
+{"doc_id": "d20", "split": "test", "kind": "entity", "type": "Period", "start": 65, "end": 72, "text": "2026-01", "occ": 0, "id": "d20-e0165"}
+{"doc_id": "d20", "split": "test", "kind": "entity", "type": "Counterparty", "start": 85, "end": 109, "text": "АТ «Київські комунальні»", "occ": 0, "id": "d20-e0166"}
+{"doc_id": "d20", "split": "test", "kind": "entity", "type": "Edrpou", "start": 118, "end": 126, "text": "33445566", "occ": 0, "id": "d20-e0167"}
+{"doc_id": "d20", "split": "test", "kind": "relation", "type": "concerns", "start": 0, "end": 73, "text": "Сезонний ризик стосується категорії Комунальні послуги у періоді 2026-01.", "subject": "Сезонний ризик", "object": "Комунальні послуги", "subject_start": 0, "object_start": 36, "id": "d20-r0168"}
+{"doc_id": "d20", "split": "test", "kind": "relation", "type": "inPeriod", "start": 0, "end": 73, "text": "Сезонний ризик стосується категорії Комунальні послуги у періоді 2026-01.", "subject": "Сезонний ризик", "object": "2026-01", "subject_start": 0, "object_start": 65, "id": "d20-r0169"}
+{"doc_id": "d20", "split": "test", "kind": "relation", "type": "identifiedBy", "start": 74, "end": 149, "text": "Контрагент АТ «Київські комунальні» (ЄДРПОУ 33445566) виставляє ці рахунки.", "subject": "АТ «Київські комунальні»", "object": "33445566", "subject_start": 85, "object_start": 118, "id": "d20-r0170"}
+{"doc_id": "d21", "split": "test", "kind": "entity", "type": "Risk", "start": 0, "end": 23, "text": "Ризик залежності доходу", "occ": 0, "id": "d21-e0171"}
+{"doc_id": "d21", "split": "test", "kind": "entity", "type": "Category", "start": 45, "end": 60, "text": "Заробітна плата", "occ": 0, "id": "d21-e0172"}
+{"doc_id": "d21", "split": "test", "kind": "entity", "type": "Counterparty", "start": 73, "end": 91, "text": "ТОВ «Роботодавець»", "occ": 0, "id": "d21-e0173"}
+{"doc_id": "d21", "split": "test", "kind": "entity", "type": "Edrpou", "start": 100, "end": 108, "text": "87654321", "occ": 0, "id": "d21-e0174"}
+{"doc_id": "d21", "split": "test", "kind": "entity", "type": "Period", "start": 149, "end": 156, "text": "2026-04", "occ": 0, "id": "d21-e0175"}
+{"doc_id": "d21", "split": "test", "kind": "relation", "type": "concerns", "start": 0, "end": 61, "text": "Ризик залежності доходу стосується категорії Заробітна плата.", "subject": "Ризик залежності доходу", "object": "Заробітна плата", "subject_start": 0, "object_start": 45, "id": "d21-r0176"}
+{"doc_id": "d21", "split": "test", "kind": "relation", "type": "identifiedBy", "start": 62, "end": 157, "text": "Контрагент ТОВ «Роботодавець» (ЄДРПОУ 87654321) є єдиним джерелом цього доходу, період 2026-04.", "subject": "ТОВ «Роботодавець»", "object": "87654321", "subject_start": 73, "object_start": 100, "id": "d21-r0177"}
+{"doc_id": "d22", "split": "test", "kind": "entity", "type": "Account", "start": 34, "end": 45, "text": "UA123456789", "occ": 0, "id": "d22-e0178"}
+{"doc_id": "d22", "split": "test", "kind": "entity", "type": "Counterparty", "start": 55, "end": 66, "text": "орендодавцю", "occ": 0, "id": "d22-e0179"}
+{"doc_id": "d22", "split": "test", "kind": "entity", "type": "Amount", "start": 67, "end": 75, "text": "15000.00", "occ": 0, "id": "d22-e0180"}
+{"doc_id": "d22", "split": "test", "kind": "entity", "type": "Currency", "start": 76, "end": 79, "text": "грн", "occ": 0, "id": "d22-e0181"}
+{"doc_id": "d22", "split": "test", "kind": "entity", "type": "Period", "start": 88, "end": 95, "text": "2026-10", "occ": 0, "id": "d22-e0182"}
+{"doc_id": "d22", "split": "test", "kind": "entity", "type": "Category", "start": 97, "end": 106, "text": "Комуналка", "occ": 0, "id": "d22-e0183"}
+{"doc_id": "d22", "split": "test", "kind": "entity", "type": "Amount", "start": 134, "end": 141, "text": "3900.00", "occ": 0, "id": "d22-e0184"}
+{"doc_id": "d22", "split": "test", "kind": "entity", "type": "Currency", "start": 142, "end": 145, "text": "грн", "occ": 1, "id": "d22-e0185"}
+{"doc_id": "d22", "split": "test", "kind": "relation", "type": "paidTo", "start": 24, "end": 96, "text": "З рахунку UA123456789 сплачено орендодавцю 15000.00 грн, період 2026-10.", "subject": "15000.00", "object": "орендодавцю", "subject_start": 67, "object_start": 55, "id": "d22-r0186"}
+{"doc_id": "d22", "split": "test", "kind": "relation", "type": "inPeriod", "start": 24, "end": 96, "text": "З рахунку UA123456789 сплачено орендодавцю 15000.00 грн, період 2026-10.", "subject": "15000.00", "object": "2026-10", "subject_start": 67, "object_start": 88, "id": "d22-r0187"}
+{"doc_id": "d22", "split": "test", "kind": "relation", "type": "hasCategory", "start": 97, "end": 146, "text": "Комуналка за той самий місяць склала 3900.00 грн.", "subject": "3900.00", "object": "Комуналка", "subject_start": 134, "object_start": 97, "id": "d22-r0188"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Amount", "start": 34, "end": 41, "text": "2000.00", "occ": 0, "id": "d23-e0189"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Currency", "start": 42, "end": 45, "text": "грн", "occ": 0, "id": "d23-e0190"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Counterparty", "start": 46, "end": 59, "text": "ФОПу Іваненку", "occ": 0, "id": "d23-e0191"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Period", "start": 68, "end": 75, "text": "2026-07", "occ": 0, "id": "d23-e0192"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Amount", "start": 86, "end": 92, "text": "640.00", "occ": 0, "id": "d23-e0193"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Currency", "start": 93, "end": 96, "text": "грн", "occ": 1, "id": "d23-e0194"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Counterparty", "start": 99, "end": 105, "text": "сільпо", "occ": 0, "id": "d23-e0195"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Category", "start": 117, "end": 120, "text": "їжа", "occ": 0, "id": "d23-e0196"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Amount", "start": 131, "end": 137, "text": "250.00", "occ": 0, "id": "d23-e0197"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Currency", "start": 138, "end": 141, "text": "грн", "occ": 2, "id": "d23-e0198"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Counterparty", "start": 145, "end": 153, "text": "київстар", "occ": 0, "id": "d23-e0199"}
+{"doc_id": "d23", "split": "test", "kind": "entity", "type": "Category", "start": 165, "end": 172, "text": "зв'язок", "occ": 0, "id": "d23-e0200"}
+{"doc_id": "d23", "split": "test", "kind": "relation", "type": "paidTo", "start": 25, "end": 76, "text": "Сплачено 2000.00 грн ФОПу Іваненку, період 2026-07.", "subject": "2000.00", "object": "ФОПу Іваненку", "subject_start": 34, "object_start": 46, "id": "d23-r0201"}
+{"doc_id": "d23", "split": "test", "kind": "relation", "type": "inPeriod", "start": 25, "end": 76, "text": "Сплачено 2000.00 грн ФОПу Іваненку, період 2026-07.", "subject": "2000.00", "object": "2026-07", "subject_start": 34, "object_start": 68, "id": "d23-r0202"}
+{"doc_id": "d23", "split": "test", "kind": "relation", "type": "paidTo", "start": 77, "end": 121, "text": "Сплачено 640.00 грн у сільпо, категорія їжа.", "subject": "640.00", "object": "сільпо", "subject_start": 86, "object_start": 99, "id": "d23-r0203"}
+{"doc_id": "d23", "split": "test", "kind": "relation", "type": "hasCategory", "start": 77, "end": 121, "text": "Сплачено 640.00 грн у сільпо, категорія їжа.", "subject": "640.00", "object": "їжа", "subject_start": 86, "object_start": 117, "id": "d23-r0204"}
+{"doc_id": "d23", "split": "test", "kind": "relation", "type": "paidTo", "start": 122, "end": 173, "text": "Сплачено 250.00 грн за київстар, категорія зв'язок.", "subject": "250.00", "object": "київстар", "subject_start": 131, "object_start": 145, "id": "d23-r0205"}
+{"doc_id": "d23", "split": "test", "kind": "relation", "type": "hasCategory", "start": 122, "end": 173, "text": "Сплачено 250.00 грн за київстар, категорія зв'язок.", "subject": "250.00", "object": "зв'язок", "subject_start": 131, "object_start": 165, "id": "d23-r0206"}

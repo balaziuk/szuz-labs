@@ -1,0 +1,23 @@
+@prefix hub: <http://example.org/hub#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+hub:fact_f-low a hub:AcceptedFact ;
+    hub:approvedBy "auto (низький ризик)" ;
+    hub:kind "alias" ;
+    hub:surface "Приват"^^xsd:string ;
+    hub:target hub:Cp_PrivatBank ;
+    prov:generatedAtTime "2026-11-15T16:32:27.023898+00:00"^^xsd:dateTime ;
+    prov:wasAttributedTo "agent" ;
+    prov:wasDerivedFrom <http://example.org/hub/source/d17> .
+
+hub:fact_f-med a hub:AcceptedFact ;
+    hub:alternative "3500 грн, виписка Op_00128",
+        "3900 грн, нотатка d22" ;
+    hub:amount 3900.0 ;
+    hub:approvedBy "власник хаба" ;
+    hub:kind "amount_note" ;
+    prov:generatedAtTime "2026-11-15T16:32:29.119814+00:00"^^xsd:dateTime ;
+    prov:wasAttributedTo "agent" ;
+    prov:wasDerivedFrom <http://example.org/hub/source/d22> .
+

@@ -55,3 +55,26 @@ __pycache__/
 ср-7/validation.md
 ср-8/results.md
 ср-9/llm_log.jsonl
+
+# ЛР13–16: матеріали для звіту (генеруються run_all, у звіті вже є)
+.pytest_cache/
+13/docs/
+13/claims/
+13/llm_log/*
+!13/llm_log/cache.jsonl
+14/claims/
+14/llm_log/*
+!14/llm_log/judge_cache.jsonl
+14/quality/rag_probe.png
+15/docs/
+15/claims/*
+!15/claims/claims.csv
+15/llm_log/*
+!15/llm_log/cache.jsonl
+!15/llm_log/summary.json
+16/docs/
+16/claims/
+16/llm_log/*
+!16/llm_log/explain_cache.jsonl
+# кеші LLM лишаються: на них працюють запуск без ключа (--no-llm, демо, Docker);
+# 15/claims і 15/llm_log/summary.json читає записка ЛР16

@@ -1,0 +1,13 @@
+{
+  "new_user": {
+    "users": 30,
+    "p5": 0.24666666666666667,
+    "interest_source": "перший вузол із поля interests; історію користувача не використано"
+  },
+  "new_item": {
+    "item": "d19",
+    "users_with_shared_node": 45,
+    "in_top5": 33,
+    "rate": 0.7333333333333333
+  }
+}

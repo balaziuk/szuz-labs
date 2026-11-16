@@ -1,0 +1,26 @@
+{
+  "utilities_october": {
+    "accepted": {
+      "value": 3500.0,
+      "source": "Op_00128",
+      "why": "виписка ЛР9, ребро категорії Комунальні послуги"
+    },
+    "alternative": {
+      "value": 3900.0,
+      "source": "szuz-labs/13/data/docs/d22.txt",
+      "why": "чорнова нотатка ЛР13, без платіжного id"
+    }
+  },
+  "rent_share_claim": {
+    "accepted": {
+      "value": "частка оренди понад 70% лише в місяцях 2026-09",
+      "source": "quality/conflicts.py за operations.csv",
+      "why": "перерахунок по місяцях, а не дослівний опис ризику"
+    },
+    "alternative": {
+      "value": "частка оренди понад 70% усіх витрат",
+      "source": "Risk_RentConcentration у ЛР9",
+      "why": "формулювання ризику без обмеження місяця"
+    }
+  }
+}

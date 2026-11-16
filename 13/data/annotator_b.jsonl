@@ -1,0 +1,40 @@
+{"id": "d01-e0001", "doc_id": "d01", "start": 55, "end": 66, "text": "UA123456789", "label": "Account"}
+{"id": "d01-e0002", "doc_id": "d01", "start": 78, "end": 81, "text": "UAH", "label": "O"}
+{"id": "d01-e0003", "doc_id": "d01", "start": 103, "end": 111, "text": "30000.00", "label": "Amount"}
+{"id": "d01-e0004", "doc_id": "d01", "start": 112, "end": 115, "text": "грн", "label": "Currency"}
+{"id": "d01-e0005", "doc_id": "d01", "start": 120, "end": 138, "text": "ТОВ «Роботодавець»", "label": "Counterparty"}
+{"id": "d01-e0006", "doc_id": "d01", "start": 150, "end": 165, "text": "Заробітна плата", "label": "Category"}
+{"id": "d01-e0007", "doc_id": "d01", "start": 174, "end": 181, "text": "2026-04", "label": "Date"}
+{"id": "d01-e0008", "doc_id": "d01", "start": 201, "end": 209, "text": "15000.00", "label": "Amount"}
+{"id": "d01-e0009", "doc_id": "d01", "start": 210, "end": 213, "text": "грн", "label": "Currency"}
+{"id": "d01-e0010", "doc_id": "d01", "start": 226, "end": 244, "text": "ТОВ «Орендодавець»", "label": "Counterparty"}
+{"id": "d01-e0011", "doc_id": "d01", "start": 256, "end": 262, "text": "Оренда", "label": "Category"}
+{"id": "d01-e0012", "doc_id": "d01", "start": 271, "end": 278, "text": "2026-04", "label": "Period"}
+{"id": "d02-e0019", "doc_id": "d02", "start": 35, "end": 53, "text": "ТОВ «Роботодавець»", "label": "Counterparty"}
+{"id": "d02-e0020", "doc_id": "d02", "start": 69, "end": 77, "text": "87654321", "label": "Account"}
+{"id": "d02-e0021", "doc_id": "d02", "start": 150, "end": 165, "text": "Заробітна плата", "label": "Category"}
+{"id": "d03-e0023", "doc_id": "d03", "start": 46, "end": 64, "text": "ТОВ «Орендодавець»", "label": "Counterparty"}
+{"id": "d03-e0024", "doc_id": "d03", "start": 77, "end": 85, "text": "12345678", "label": "Edrpou"}
+{"id": "d03-e0025", "doc_id": "d03", "start": 103, "end": 109, "text": "Оренда", "label": "Category"}
+{"id": "d03-e0026", "doc_id": "d03", "start": 120, "end": 128, "text": "15000.00", "label": "Amount"}
+{"id": "d03-e0027", "doc_id": "d03", "start": 129, "end": 132, "text": "грн", "label": "O"}
+{"id": "d03-e0028", "doc_id": "d03", "start": 143, "end": 150, "text": "2026-04", "label": "Period"}
+{"id": "d04-e0031", "doc_id": "d04", "start": 74, "end": 92, "text": "Комунальні послуги", "label": "Category"}
+{"id": "d04-e0032", "doc_id": "d04", "start": 103, "end": 110, "text": "4000.00", "label": "Amount"}
+{"id": "d04-e0033", "doc_id": "d04", "start": 111, "end": 114, "text": "грн", "label": "Currency"}
+{"id": "d04-e0034", "doc_id": "d04", "start": 146, "end": 156, "text": "Харчування", "label": "Category"}
+{"id": "d04-e0035", "doc_id": "d04", "start": 202, "end": 209, "text": "2026-04", "label": "Period"}
+{"id": "d04-e0036", "doc_id": "d04", "start": 255, "end": 279, "text": "АТ «Київські комунальні»", "label": "Counterparty"}
+{"id": "d05-e0038", "doc_id": "d05", "start": 29, "end": 45, "text": "ТОВ «Сільпо-Фуд»", "label": "Counterparty"}
+{"id": "d05-e0039", "doc_id": "d05", "start": 54, "end": 62, "text": "40720198", "label": "Edrpou"}
+{"id": "d05-e0040", "doc_id": "d05", "start": 73, "end": 80, "text": "1690.00", "label": "Amount"}
+{"id": "d05-e0041", "doc_id": "d05", "start": 81, "end": 84, "text": "грн", "label": "Currency"}
+{"id": "d05-e0042", "doc_id": "d05", "start": 96, "end": 106, "text": "Харчування", "label": "Category"}
+{"id": "d05-e0043", "doc_id": "d05", "start": 115, "end": 122, "text": "2026-04", "label": "Date"}
+{"id": "d05-e0044", "doc_id": "d05", "start": 126, "end": 142, "text": "ТОВ «АТБ-Маркет»", "label": "Counterparty"}
+{"id": "d05-e0045", "doc_id": "d05", "start": 151, "end": 159, "text": "30487219", "label": "Edrpou"}
+{"id": "d05-e0046", "doc_id": "d05", "start": 170, "end": 176, "text": "850.00", "label": "Amount"}
+{"id": "d05-e0047", "doc_id": "d05", "start": 177, "end": 180, "text": "грн", "label": "Currency"}
+{"id": "d05-e0048", "doc_id": "d05", "start": 192, "end": 202, "text": "Харчування", "label": "Category"}
+{"id": "d06-e0056", "doc_id": "d06", "start": 32, "end": 47, "text": "ПрАТ «Київстар»", "label": "Counterparty"}
+{"id": "d06-e0057", "doc_id": "d06", "start": 56, "end": 64, "text": "21673832", "label": "Edrpou"}

@@ -1,0 +1,10 @@
+{
+  "calls": 253,
+  "by_model": {
+    "qwen/qwen3.8-27b": 1,
+    "openai/gpt-oss-120b": 252
+  },
+  "tokens_in": 259169,
+  "tokens_out": 41041,
+  "parse_errors": 0
+}
