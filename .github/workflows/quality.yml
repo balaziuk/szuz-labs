@@ -1,0 +1,39 @@
+name: quality
+
+# Gate якості сховища (ЛР14). Корінь репозиторію — szuz-labs, тому каталог лаби — 14.
+# Потрібні закомічені 8/data.ttl і 9/data/*.csv: gate читає саме їх.
+on:
+  push:
+  pull_request:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "14"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Gate на чистому сховищі (код 1 при будь-якому порушенні)
+        run: python quality/gate.py
+      - name: Навмисні дефекти мають ламати gate
+        run: |
+          for kind in amount account budget; do
+            if python quality/gate.py --inject "$kind"; then
+              echo "дефект $kind не спіймано"; exit 1
+            fi
+          done
+      - name: pytest
+        run: python -m pytest quality/tests -q
+      - name: Звіт gate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate-report
+          path: |
+            14/quality/gate_log.md
+            14/quality/gate_trend.csv
