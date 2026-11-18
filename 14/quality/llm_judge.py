@@ -44,6 +44,20 @@ def _cache():
     return {row["key"]: row for row in (json.loads(x) for x in CACHE.read_text(encoding="utf-8").splitlines() if x.strip())}
 
 
+def _previous_review(pair_id, raw):
+    """Рішення людини з попереднього запису тієї ж пари з тим самим сирим виходом (кеш)."""
+    if not LOG.exists():
+        return None, None
+    found = (None, None)
+    for line in LOG.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        rec = json.loads(line)
+        if rec.get("pair_id") == pair_id and rec.get("raw_output") == raw and rec.get("human_decision"):
+            found = (rec["human_decision"], rec.get("human_note"))
+    return found
+
+
 def _append(path, row):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("a", encoding="utf-8") as handle:
@@ -101,6 +115,7 @@ def judge(left, right, pair_id):
         verdict = json.loads(text[text.find("{"): text.rfind("}") + 1])
     except (ValueError, json.JSONDecodeError):
         verdict = {"duplicate": None, "confidence": 0, "explanation": "невалідний JSON"}
+    decision, note = _previous_review(pair_id, row["raw"]) if cached else (None, None)
     _append(
         LOG,
         {
@@ -115,7 +130,8 @@ def judge(left, right, pair_id):
             "tokens_in": row["tokens_in"],
             "tokens_out": row["tokens_out"],
             "cached": cached,
-            "human_decision": None,
+            "human_decision": decision,
+            "human_note": note,
         },
     )
     return {"duplicate": verdict.get("duplicate"), "confidence": verdict.get("confidence"), "explanation": verdict.get("explanation", ""), "model": row["model"]}

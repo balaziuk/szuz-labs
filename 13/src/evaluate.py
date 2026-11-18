@@ -297,7 +297,7 @@ def write_claims(rules_micro, llm_micro, rules_cited, llm_cited):
             [
                 "C06",
                 f"Метод Б на test має мікро-F1 {llm_micro['f1']:.3f} проти {rules_micro['f1']:.3f} у методу А",
-                "hypothesis",
+                "fact",
                 "docs/extraction_eval.md",
                 "V4",
                 "verified" if llm_cited == 0 else "pending",
